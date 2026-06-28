@@ -4,1321 +4,418 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conecta Storage 2026 — Relatório Completo do Mercado</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
-:root {
-  color-scheme: light;
-  --bg: #f0f4f8;
-  --card: #ffffff;
-  --navy: #0f2847;
-  --blue: #1d4ed8;
-  --sky: #0ea5e9;
-  --green: #059669;
-  --amber: #d97706;
-  --red: #dc2626;
-  --purple: #7c3aed;
-  --text: #1e293b;
-  --text2: #475569;
-  --text3: #94a3b8;
-  --border: #e2e8f0;
-  --border2: #cbd5e1;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-
-/* NAV */
-nav {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--navy);
-  padding: 0 24px;
-  display: flex; align-items: center; gap: 4px;
-  overflow-x: auto; scrollbar-width: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
-nav::-webkit-scrollbar { display: none; }
-.nav-brand { color: #fff; font-weight: 700; font-size: 14px; margin-right: 16px; white-space: nowrap; padding: 14px 0; letter-spacing: 0.5px; }
-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; padding: 14px 12px; white-space: nowrap; transition: color 0.2s, border-bottom 0.2s; border-bottom: 2px solid transparent; }
-nav a:hover { color: #fff; }
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, var(--navy) 0%, #1d4ed8 60%, #0ea5e9 100%);
-  color: #fff; padding: 64px 24px 72px;
-  text-align: center; position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-.hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 800; margin-bottom: 8px; position: relative; }
-.hero p { font-size: 16px; opacity: 0.85; margin-bottom: 48px; position: relative; }
-.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; position: relative; }
-.kpi-card { background: rgba(255,255,255,0.12); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 20px 16px; text-align: center; }
-.kpi-value { font-size: clamp(22px, 3vw, 32px); font-weight: 800; line-height: 1.1; }
-.kpi-label { font-size: 11px; opacity: 0.8; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-.kpi-delta { font-size: 11px; color: #86efac; margin-top: 6px; font-weight: 600; }
-
-/* LAYOUT */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-section { padding: 64px 0; }
-section:nth-child(even) { background: #fff; }
-.section-tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); background: #eff6ff; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
-.section-title { font-size: clamp(22px, 3vw, 32px); font-weight: 800; color: var(--navy); margin-bottom: 8px; }
-.section-sub { color: var(--text2); font-size: 15px; margin-bottom: 40px; max-width: 640px; }
-
-/* CARDS */
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-.card { background: var(--card); border-radius: 16px; padding: 24px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.card-sm { background: var(--card); border-radius: 12px; padding: 18px 20px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.stat-big { font-size: 36px; font-weight: 800; color: var(--navy); line-height: 1; }
-.stat-label { color: var(--text2); font-size: 13px; margin-top: 4px; }
-.stat-delta-up { color: var(--green); font-size: 12px; font-weight: 600; margin-top: 6px; }
-.stat-delta-dn { color: var(--red); font-size: 12px; font-weight: 600; margin-top: 6px; }
-.icon-box { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
-
-/* CHART WRAPPER */
-.chart-wrap { background: var(--card); border-radius: 16px; padding: 24px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.chart-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-.chart-sub { font-size: 12px; color: var(--text3); margin-bottom: 20px; }
-.chart-container { position: relative; height: 260px; }
-
-/* TABLE */
-.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.data-table th { background: #f8fafc; color: var(--text2); font-weight: 600; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-.data-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); }
-.data-table tr:last-child td { border-bottom: none; }
-.data-table tr:hover td { background: #f8fafc; }
-.badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
-.badge-green { background: #dcfce7; color: #15803d; }
-.badge-blue { background: #dbeafe; color: #1d4ed8; }
-.badge-amber { background: #fef3c7; color: #92400e; }
-.badge-red { background: #fee2e2; color: #b91c1c; }
-
-/* COMPARISON */
-.compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; }
-.compare-col { flex: 1; }
-.compare-divider { width: 2px; background: linear-gradient(to bottom, transparent, var(--border2), transparent); margin: 0 20px; }
-.compare-year { text-align: center; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 8px; color: #fff; margin-bottom: 16px; }
-.compare-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
-.compare-item:last-child { border-bottom: none; }
-.compare-metric { font-size: 12px; color: var(--text2); }
-.compare-val { font-size: 15px; font-weight: 700; color: var(--navy); }
-.delta-arrow { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
-.delta-up { background: #dcfce7; color: #15803d; }
-.delta-dn { background: #fee2e2; color: #b91c1c; }
-
-/* TIMELINE */
-.timeline { position: relative; padding-left: 32px; }
-.timeline::before { content: ''; position: absolute; left: 11px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--blue), var(--sky)); }
-.timeline-item { position: relative; margin-bottom: 24px; }
-.timeline-dot { position: absolute; left: -32px; width: 22px; height: 22px; border-radius: 50%; background: var(--blue); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--blue); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #fff; }
-.timeline-year { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
-.timeline-text { font-size: 14px; color: var(--text); margin-top: 2px; }
-
-/* AI TABLE */
-.ai-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.ai-table th { background: var(--navy); color: #fff; padding: 12px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-.ai-table th:first-child { border-radius: 10px 0 0 0; }
-.ai-table th:last-child { border-radius: 0 10px 0 0; }
-.ai-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
-.ai-table tr:hover td { background: #f8fafc; }
-.ai-table tr:last-child td { border-bottom: none; }
-
-/* PILLS */
-.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-.pill { padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid; }
-.pill-blue { background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; }
-.pill-green { background: #f0fdf4; border-color: #bbf7d0; color: #15803d; }
-.pill-amber { background: #fffbeb; border-color: #fde68a; color: #92400e; }
-.pill-red { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
-.pill-purple { background: #faf5ff; border-color: #ddd6fe; color: #7c3aed; }
-
-/* TAKEAWAY CARDS */
-.takeaway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.takeaway-card { background: var(--card); border-radius: 16px; padding: 24px; border-left: 4px solid; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.takeaway-num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-.takeaway-text { font-size: 14px; color: var(--text); line-height: 1.6; }
-
-/* PROGRESS BAR */
-.progress-row { margin-bottom: 14px; }
-.progress-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
-.progress-label span:first-child { font-weight: 600; color: var(--text); }
-.progress-label span:last-child { font-weight: 700; color: var(--navy); }
-.progress-bar { height: 10px; background: #e2e8f0; border-radius: 20px; overflow: hidden; }
-.progress-fill { height: 100%; border-radius: 20px; transition: width 1s ease; }
-
-/* FONTE */
-.fonte { font-size: 11px; color: var(--text3); margin-top: 16px; font-style: italic; }
-.fonte a { color: var(--sky); }
-
-/* FOOTER */
-footer { background: var(--navy); color: rgba(255,255,255,0.7); text-align: center; padding: 40px 24px; font-size: 13px; }
-footer strong { color: #fff; }
-
-/* RESPONSIVE */
-@media (max-width: 640px) {
-  .compare-grid { grid-template-columns: 1fr; }
-  .compare-divider { display: none; }
-}
-
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-.fade-up { animation: fadeUp 0.6s ease forwards; }
-
-/* SECTION ALT BG */
-.bg-alt { background: #f8fafc; }
-.bg-dark { background: var(--navy); color: #fff; }
-.bg-dark .section-tag { background: rgba(255,255,255,0.15); color: #bfdbfe; }
-.bg-dark .section-title { color: #fff; }
-.bg-dark .section-sub { color: rgba(255,255,255,0.7); }
-.bg-dark .card { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
-.bg-dark .stat-big { color: #fff; }
-.bg-dark .stat-label { color: rgba(255,255,255,0.6); }
-
-/* SOURCE PILL */
-.source-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.source-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; padding: 4px 10px; border-radius: 20px; background: #f1f5f9; border: 1px solid var(--border); color: var(--text2); }
-.source-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sky); }
+:root{color-scheme:light;--bg:#f0f4f8;--card:#ffffff;--navy:#0f2847;--blue:#1d4ed8;--sky:#0ea5e9;--green:#059669;--amber:#d97706;--red:#dc2626;--purple:#7c3aed;--text:#1e293b;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--border2:#cbd5e1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;box-shadow:0 2px 8px rgba(0,0,0,0.25)}
+nav::-webkit-scrollbar{display:none}
+.nav-brand{color:#fff;font-weight:700;font-size:13px;margin-right:12px;white-space:nowrap;padding:14px 0}
+nav a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:11px;padding:14px 10px;white-space:nowrap;transition:color .2s}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1d4ed8 60%,#0ea5e9 100%);color:#fff;padding:64px 24px 72px;text-align:center}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(24px,4vw,44px);font-weight:800;margin-bottom:8px}
+.hero p{font-size:15px;opacity:.85;margin-bottom:48px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;max-width:960px;margin:0 auto}
+.kpi-card{background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:14px;padding:18px 14px;text-align:center}
+.kpi-value{font-size:clamp(20px,2.5vw,28px);font-weight:800;line-height:1.1}
+.kpi-label{font-size:10px;opacity:.8;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-delta{font-size:11px;color:#86efac;margin-top:5px;font-weight:600}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+.bg-alt{background:#f8fafc}
+.section-tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue);background:#eff6ff;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.section-title{font-size:clamp(20px,3vw,30px);font-weight:800;color:var(--navy);margin-bottom:8px}
+.section-sub{color:var(--text2);font-size:14px;margin-bottom:36px;max-width:640px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:var(--card);border-radius:16px;padding:24px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card-sm{background:var(--card);border-radius:12px;padding:18px 20px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.chart-wrap{background:var(--card);border-radius:16px;padding:24px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.chart-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.chart-sub{font-size:12px;color:var(--text3);margin-bottom:18px}
+.chart-container{position:relative;height:260px}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{background:#f8fafc;color:var(--text2);font-weight:600;padding:10px 14px;text-align:left;border-bottom:2px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.data-table td{padding:12px 14px;border-bottom:1px solid var(--border)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:#f8fafc}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.badge-green{background:#dcfce7;color:#15803d}
+.badge-blue{background:#dbeafe;color:#1d4ed8}
+.badge-amber{background:#fef3c7;color:#92400e}
+.badge-red{background:#fee2e2;color:#b91c1c}
+.compare-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch}
+.compare-divider{width:2px;background:linear-gradient(to bottom,transparent,var(--border2),transparent);margin:0 20px}
+.compare-year{text-align:center;font-size:13px;font-weight:700;padding:8px 16px;border-radius:8px;color:#fff;margin-bottom:16px}
+.compare-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.compare-item:last-child{border-bottom:none}
+.compare-metric{font-size:12px;color:var(--text2)}
+.compare-val{font-size:15px;font-weight:700;color:var(--navy)}
+.delta-arrow{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;padding:2px 8px;border-radius:20px}
+.delta-up{background:#dcfce7;color:#15803d}
+.delta-dn{background:#fee2e2;color:#b91c1c}
+.pill-grid{display:flex;flex-wrap:wrap;gap:8px}
+.pill{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;border:1px solid}
+.pill-blue{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.pill-green{background:#f0fdf4;border-color:#bbf7d0;color:#15803d}
+.pill-amber{background:#fffbeb;border-color:#fde68a;color:#92400e}
+.pill-red{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+.pill-purple{background:#faf5ff;border-color:#ddd6fe;color:#7c3aed}
+.takeaway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.takeaway-card{background:var(--card);border-radius:16px;padding:24px;border-left:4px solid;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.takeaway-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.takeaway-text{font-size:14px;color:var(--text);line-height:1.6}
+.seg-region-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.seg-region-name{font-size:12px;font-weight:600;color:var(--navy);width:110px;flex-shrink:0}
+.seg-region-track{flex:1;height:8px;background:#e2e8f0;border-radius:20px;overflow:hidden}
+.seg-region-fill{height:100%;border-radius:20px}
+.seg-region-pct{font-size:12px;font-weight:700;width:50px;text-align:right}
+.stat-big{font-size:36px;font-weight:800;color:var(--navy);line-height:1}
+.stat-label{color:var(--text2);font-size:13px;margin-top:4px}
+.stat-delta-up{color:var(--green);font-size:12px;font-weight:600;margin-top:6px}
+.ai-table{width:100%;border-collapse:collapse;font-size:13px}
+.ai-table th{background:var(--navy);color:#fff;padding:12px 16px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.ai-table th:first-child{border-radius:10px 0 0 0}
+.ai-table th:last-child{border-radius:0 10px 0 0}
+.ai-table td{padding:12px 16px;border-bottom:1px solid var(--border)}
+.ai-table tr:hover td{background:#f8fafc}
+.ai-table tr:last-child td{border-bottom:none}
+.source-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:4px 10px;border-radius:20px;background:#f1f5f9;border:1px solid var(--border);color:var(--text2);margin:4px}
+.source-dot{width:6px;height:6px;border-radius:50%;background:var(--sky)}
+footer{background:var(--navy);color:rgba(255,255,255,0.7);text-align:center;padding:40px 24px;font-size:13px}
+footer strong{color:#fff}
+@media(max-width:640px){.compare-grid{grid-template-columns:1fr}.compare-divider{display:none}}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
-  <span class="nav-brand">📦 Conecta Storage 2026</span>
+  <span class="nav-brand">&#128230; Conecta Storage 2026</span>
   <a href="#mercado-global">Mercado Global</a>
   <a href="#mercado-brasil">Brasil</a>
   <a href="#prisma-box">Prisma Box</a>
-  <a href="#regioes">Regiões</a>
-  <a href="#comparativo">2025 vs 2026</a>
+  <a href="#regioes">Regioes</a>
+  <a href="#comparativo">2025&#8596;2026</a>
+  <a href="#pagamentos">Pagamentos</a>
+  <a href="#preco-m2">Preco M2</a>
   <a href="#ia">IA</a>
   <a href="#seguros">Seguros</a>
-  <a href="#juridico">Jurídico</a>
-  <a href="#inadimplencia">Inadimplência</a>
+  <a href="#juridico">Juridico</a>
+  <a href="#inadimplencia">Inadimplencia</a>
   <a href="#takeaways">Takeaways</a>
 </nav>
-
-<!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">Relatório Conecta Storage 2026</div>
+  <div class="hero-badge">Relatorio Conecta Storage 2026</div>
   <h1>Self Storage: O Mercado que Cresce Acima do PIB</h1>
-  <p>Dados do Congresso Conecta Storage 2026 · Prisma Box · Benchmarks Nacionais e Globais</p>
+  <p>Dados do Congresso Conecta Storage 2026 &middot; Sistema Prisma Box &middot; Benchmarks Nacionais e Globais</p>
   <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-value">322</div>
-      <div class="kpi-label">Unidades Prisma Box</div>
-      <div class="kpi-delta">▲ +6% vs 2025</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-value">80.411</div>
-      <div class="kpi-label">Boxes em Operação</div>
-      <div class="kpi-delta">▲ +13% vs 2025</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-value">74,71%</div>
-      <div class="kpi-label">Ocupação Média</div>
-      <div class="kpi-delta">▲ +2pp vs 2025</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-value">R$491</div>
-      <div class="kpi-label">Ticket Médio</div>
-      <div class="kpi-delta">▲ +14% vs 2025</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-value">524.953 m²</div>
-      <div class="kpi-label">ABL Total</div>
-      <div class="kpi-delta">▲ +12% vs 2025</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-value">~620</div>
-      <div class="kpi-label">Unidades no Brasil</div>
-      <div class="kpi-delta">▲ +18% vs 2025</div>
-    </div>
+    <div class="kpi-card"><div class="kpi-value">322</div><div class="kpi-label">Unidades Prisma Box</div><div class="kpi-delta">&#9650; +6% vs 2025</div></div>
+    <div class="kpi-card"><div class="kpi-value">80.411</div><div class="kpi-label">Boxes em Operacao</div><div class="kpi-delta">&#9650; +13% vs 2025</div></div>
+    <div class="kpi-card"><div class="kpi-value">74,71%</div><div class="kpi-label">Ocupacao Media</div><div class="kpi-delta">&#9650; +2pp vs 2025</div></div>
+    <div class="kpi-card"><div class="kpi-value">R$491</div><div class="kpi-label">Ticket Medio</div><div class="kpi-delta">&#9650; +14% vs 2025</div></div>
+    <div class="kpi-card"><div class="kpi-value">+48%</div><div class="kpi-label">Alta do Preco/m2</div><div class="kpi-delta">&#9650; +12pp acima IPCA</div></div>
+    <div class="kpi-card"><div class="kpi-value">PIX 38,54%</div><div class="kpi-label">Share Pagamentos</div><div class="kpi-delta">&#9650; 2o mais usado 2026</div></div>
   </div>
 </div>
-
-<!-- MERCADO GLOBAL -->
 <section id="mercado-global">
   <div class="container">
     <div class="section-tag">Contexto Global</div>
     <h2 class="section-title">Mercado Global de Self Storage</h2>
-    <p class="section-sub">O setor movimenta mais de USD 64 bilhões ao ano e cresce de forma consistente, impulsionado por urbanização, redução dos imóveis e expansão do e-commerce.</p>
-
+    <p class="section-sub">O setor movimenta mais de USD 64 bilhoes ao ano e cresce de forma consistente, impulsionado por urbanizacao e expansao do e-commerce.</p>
     <div class="grid-4" style="margin-bottom:32px;">
-      <div class="card-sm">
-        <div class="icon-box" style="background:#eff6ff;">🌎</div>
-        <div class="stat-big">$64B</div>
-        <div class="stat-label">Mercado Global 2025</div>
-        <div class="stat-delta-up">▲ CAGR 7,7%</div>
-      </div>
-      <div class="card-sm">
-        <div class="icon-box" style="background:#f0fdf4;">🇺🇸</div>
-        <div class="stat-big">52.000+</div>
-        <div class="stat-label">Unidades nos EUA</div>
-        <div class="stat-delta-up">Maior mercado mundial</div>
-      </div>
-      <div class="card-sm">
-        <div class="icon-box" style="background:#faf5ff;">📈</div>
-        <div class="stat-big">$113B</div>
-        <div class="stat-label">Projeção 2035</div>
-        <div class="stat-delta-up">▲ +77% em 10 anos</div>
-      </div>
-      <div class="card-sm">
-        <div class="icon-box" style="background:#fffbeb;">🏙️</div>
-        <div class="stat-big">77%</div>
-        <div class="stat-label">Ocupação EUA (Q4 2025)</div>
-        <div class="stat-delta-up">Benchmark de referência</div>
-      </div>
+      <div class="card-sm"><div class="stat-big">$64B</div><div class="stat-label">Mercado Global 2025</div><div class="stat-delta-up">&#9650; CAGR 7,7%</div></div>
+      <div class="card-sm"><div class="stat-big">52.000+</div><div class="stat-label">Unidades nos EUA</div><div class="stat-delta-up">Maior mercado mundial</div></div>
+      <div class="card-sm"><div class="stat-big">$113B</div><div class="stat-label">Projecao 2035</div><div class="stat-delta-up">&#9650; +77% em 10 anos</div></div>
+      <div class="card-sm"><div class="stat-big">77%</div><div class="stat-label">Ocupacao EUA (Q4 2025)</div><div class="stat-delta-up">Benchmark de referencia</div></div>
     </div>
-
     <div class="grid-2">
-      <div class="chart-wrap">
-        <div class="chart-title">Crescimento do Mercado Global (USD Bilhões)</div>
-        <div class="chart-sub">Evolução 2022–2026 com projeção</div>
-        <div class="chart-container"><canvas id="globalMarketChart"></canvas></div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Ocupação EUA por Região (Q4 2025)</div>
-        <div class="chart-sub">Referência de benchmark global</div>
-        <div class="chart-container"><canvas id="usaOccupancyChart"></canvas></div>
-      </div>
+      <div class="chart-wrap"><div class="chart-title">Crescimento do Mercado Global (USD Bilhoes)</div><div class="chart-sub">Evolucao 2022-2026</div><div class="chart-container"><canvas id="globalMarketChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Ocupacao EUA por Regiao (Q4 2025)</div><div class="chart-sub">Benchmark global de referencia</div><div class="chart-container"><canvas id="usaOccupancyChart"></canvas></div></div>
     </div>
-
-    <div class="source-pills" style="margin-top:20px;">
-      <span class="source-pill"><span class="source-dot"></span>Precedence Research 2025</span>
-      <span class="source-pill"><span class="source-dot"></span>IMARC Group — Global Self Storage 2025</span>
-      <span class="source-pill"><span class="source-dot"></span>Cushman &amp; Wakefield US Sector Outlook 2025</span>
-      <span class="source-pill"><span class="source-dot"></span>Business Research Company 2026</span>
-    </div>
+    <div style="margin-top:16px;"><span class="source-pill"><span class="source-dot"></span>Precedence Research 2025</span><span class="source-pill"><span class="source-dot"></span>IMARC Group 2025</span><span class="source-pill"><span class="source-dot"></span>Cushman &amp; Wakefield US 2025</span></div>
   </div>
 </section>
-
-<!-- MERCADO BRASIL -->
 <section id="mercado-brasil" class="bg-alt">
   <div class="container">
     <div class="section-tag">Panorama Nacional</div>
     <h2 class="section-title">Self Storage no Brasil</h2>
-    <p class="section-sub">O Brasil representa 3% do mercado global, mas cresce acima do PIB e tem enorme potencial de expansão, especialmente fora dos grandes centros.</p>
-
+    <p class="section-sub">O Brasil representa 3% do mercado global, mas cresce acima do PIB. O principal desafio: "O dificil nao e usar, mas saber o nome!"</p>
     <div class="grid-4" style="margin-bottom:32px;">
-      <div class="card-sm">
-        <div class="stat-big" style="color:var(--blue);">220.901</div>
-        <div class="stat-label">Boxes no Brasil (2025)</div>
-        <div class="stat-delta-up">▲ +49,5% desde 2021</div>
-      </div>
-      <div class="card-sm">
-        <div class="stat-big" style="color:var(--blue);">595</div>
-        <div class="stat-label">Unidades em operação</div>
-        <div class="stat-delta-up">Em 110 cidades brasileiras</div>
-      </div>
-      <div class="card-sm">
-        <div class="stat-big" style="color:var(--blue);">3%</div>
-        <div class="stat-label">Share do mercado global</div>
-        <div class="stat-delta-up">▲ Crescendo vs média global</div>
-      </div>
-      <div class="card-sm">
-        <div class="stat-big" style="color:var(--blue);">USD 1,76B</div>
-        <div class="stat-label">Receita Brasil (2024)</div>
-        <div class="stat-delta-up">▲ USD 2,54B projetado 2030</div>
+      <div class="card-sm"><div class="stat-big" style="color:var(--blue);">220.901</div><div class="stat-label">Boxes no Brasil (2025)</div><div class="stat-delta-up">&#9650; +49,5% desde 2021</div></div>
+      <div class="card-sm"><div class="stat-big" style="color:var(--blue);">595</div><div class="stat-label">Unidades em operacao</div><div class="stat-delta-up">Em 110 cidades brasileiras</div></div>
+      <div class="card-sm"><div class="stat-big" style="color:var(--blue);">3%</div><div class="stat-label">Share do mercado global</div><div class="stat-delta-up">Crescendo acima da media</div></div>
+      <div class="card-sm"><div class="stat-big" style="color:var(--blue);">USD 1,76B</div><div class="stat-label">Receita Brasil (2024)</div><div class="stat-delta-up">&#9650; USD 2,54B projetado 2030</div></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:24px;">
+      <div class="chart-wrap"><div class="chart-title">Crescimento de Boxes no Brasil (ASBRASS)</div><div class="chart-sub">Evolucao 2021-2025</div><div class="chart-container"><canvas id="brasilBoxesChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Receita Brasil - Projecao 2024-2030 (USD Bi)</div><div class="chart-sub">Grand View Research 2025</div><div class="chart-container"><canvas id="brasilWorldChart"></canvas></div></div>
+    </div>
+    <div class="card" style="border-left:4px solid var(--amber);">
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;">Contexto 2026 - Desafios e Oportunidades</h3>
+      <div class="grid-4">
+        <div style="padding:12px;background:#fef2f2;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Eleicoes</div><div style="font-size:12px;color:var(--text2);">Impacto no humor do mercado</div></div>
+        <div style="padding:12px;background:#fffbeb;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Petroleo Alto</div><div style="font-size:12px;color:var(--text2);">Pressao nos custos operacionais</div></div>
+        <div style="padding:12px;background:#fef2f2;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Inadimpl. Familiar</div><div style="font-size:12px;color:var(--text2);">Atencao redobrada na cobranca</div></div>
+        <div style="padding:12px;background:#faf5ff;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Recuperacao Judicial</div><div style="font-size:12px;color:var(--text2);">Indices em alta - oportunidade PJ</div></div>
       </div>
     </div>
-
-    <div class="grid-2">
-      <div class="chart-wrap">
-        <div class="chart-title">Crescimento de Boxes no Brasil (ASBRASS)</div>
-        <div class="chart-sub">Evolução anual 2021–2025</div>
-        <div class="chart-container"><canvas id="brasilBoxesChart"></canvas></div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Brasil vs Mundo — Perspectiva de Mercado</div>
-        <div class="chart-sub">Receita projetada 2024–2030 (USD Bi)</div>
-        <div class="chart-container"><canvas id="brasilWorldChart"></canvas></div>
-      </div>
-    </div>
-
-    <div style="margin-top:28px; padding: 24px; background: #fff; border-radius:16px; border:1px solid var(--border);">
-      <h3 style="font-size:16px; font-weight:700; color:var(--navy); margin-bottom:16px;">Perfil do Mercado Brasileiro</h3>
-      <div class="grid-3">
-        <div>
-          <div style="font-size:12px; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px;">Perfil do Cliente</div>
-          <div class="progress-row">
-            <div class="progress-label"><span>Pessoa Física</span><span>~55%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:55%; background:var(--blue);"></div></div>
-          </div>
-          <div class="progress-row">
-            <div class="progress-label"><span>Pessoa Jurídica</span><span>~35%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:35%; background:var(--sky);"></div></div>
-          </div>
-          <div class="progress-row">
-            <div class="progress-label"><span>E-commerce / Logística</span><span>~10%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:10%; background:var(--green);"></div></div>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:12px; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px;">Tamanho dos Boxes</div>
-          <div class="progress-row">
-            <div class="progress-label"><span>Até 3m² (micro)</span><span>39%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:39%; background:var(--purple);"></div></div>
-          </div>
-          <div class="progress-row">
-            <div class="progress-label"><span>3m² – 10m² (médio)</span><span>43%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:43%; background:var(--blue);"></div></div>
-          </div>
-          <div class="progress-row">
-            <div class="progress-label"><span>Acima de 10m² (grande)</span><span>18%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="width:18%; background:var(--amber);"></div></div>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:12px; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px;">Drivers de Crescimento</div>
-          <div class="pill-grid" style="flex-direction:column; gap:8px;">
-            <span class="pill pill-blue">🏙️ Apartamentos menores</span>
-            <span class="pill pill-green">📦 Expansão do e-commerce</span>
-            <span class="pill pill-amber">🚚 Última milha logística</span>
-            <span class="pill pill-purple">💼 Empreendedores digitais</span>
-            <span class="pill pill-red">🌎 Expansão para interior</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="source-pills">
-      <span class="source-pill"><span class="source-dot"></span>ASBRASS — Associação Brasileira de Self Storage</span>
-      <span class="source-pill"><span class="source-dot"></span>Grand View Research — Brazil Market 2025–2030</span>
-      <span class="source-pill"><span class="source-dot"></span>Mundo Logística 2025</span>
-      <span class="source-pill"><span class="source-dot"></span>ISTOÉ Dinheiro — GoodStorage 2024</span>
-    </div>
+    <div style="margin-top:16px;"><span class="source-pill"><span class="source-dot"></span>ASBRASS 2025</span><span class="source-pill"><span class="source-dot"></span>Grand View Research 2025</span><span class="source-pill"><span class="source-dot"></span>Prisma Box - Conecta Storage 2026</span></div>
   </div>
 </section>
-
-<!-- PRISMA BOX -->
 <section id="prisma-box">
   <div class="container">
-    <div class="section-tag">Dados do Congresso</div>
-    <h2 class="section-title">Panorama Prisma Box 2026</h2>
-    <p class="section-sub">Dados apurados pelo sistema Prisma Box, apresentados no Conecta Storage 2026 realizado em maio de 2026. A maior base de dados do setor no Brasil.</p>
-
+    <div class="section-tag">Sistema de Gestao</div>
+    <h2 class="section-title">Prisma Box - O Sistema da Industria</h2>
+    <p class="section-sub">A Prisma Box e uma <strong>empresa de tecnologia</strong>, fundada em 2015 em Joinville-SC (CNPJ: 24.192.041/0001-95). Desenvolve software exclusivo para gestao de self storage - nao e operadora de espacos, e o sistema que os operadores usam.</p>
+    <div class="grid-4" style="margin-bottom:28px;">
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:32px;font-weight:800;color:var(--blue);">2015</div><div style="font-size:13px;color:var(--text2);">fundacao do sistema</div><div style="font-size:11px;color:var(--text3);">Joinville-SC</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:32px;font-weight:800;color:var(--green);">322</div><div style="font-size:13px;color:var(--text2);">unidades usando o sistema</div><div style="font-size:11px;color:var(--text3);">em 2026</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--amber);"><div style="font-size:32px;font-weight:800;color:var(--amber);">56</div><div style="font-size:13px;color:var(--text2);">apresentacoes Jan-Maio 2026</div><div style="font-size:11px;color:var(--text3);">60%+ sao novos empreendedores</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--purple);"><div style="font-size:32px;font-weight:800;color:var(--purple);">80.411</div><div style="font-size:13px;color:var(--text2);">boxes gerenciados</div><div style="font-size:11px;color:var(--text3);">524.953 m2 de ABL</div></div>
+    </div>
     <div class="grid-2" style="margin-bottom:28px;">
-      <div class="chart-wrap">
-        <div class="chart-title">Evolução Histórica Prisma Box — Brasil</div>
-        <div class="chart-sub">Número de unidades e boxes 2016–2026</div>
-        <div class="chart-container"><canvas id="prismaEvolutionChart"></canvas></div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Distribuição de Unidades por Região</div>
-        <div class="chart-sub">Total: 322 unidades Prisma Box</div>
-        <div class="chart-container"><canvas id="regionDistChart"></canvas></div>
-      </div>
-    </div>
-
-    <!-- Timeline Prisma Box -->
-    <div class="card" style="margin-bottom:28px;">
-      <h3 style="font-size:16px; font-weight:700; color:var(--navy); margin-bottom:24px;">📅 Jornada do Prisma Box (2016–2026)</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot">16</div>
-          <div class="timeline-year">2016</div>
-          <div class="timeline-text">Lançamento do sistema Prisma Box com as primeiras unidades cadastradas</div>
+      <div class="chart-wrap"><div class="chart-title">Evolucao Historica - Unidades usando Prisma Box</div><div class="chart-sub">Crescimento 2016-2026</div><div class="chart-container"><canvas id="prismaEvolutionChart"></canvas></div></div>
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">O Que o Sistema Faz</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="padding:10px;background:#eff6ff;border-radius:8px;font-size:13px;"><strong>Cobranca Automatica</strong> - boleto, PIX e cartao integrados com baixa automatica</div>
+          <div style="padding:10px;background:#f0fdf4;border-radius:8px;font-size:13px;"><strong>Controle de Acesso</strong> - gestao autonoma de fechaduras e entradas</div>
+          <div style="padding:10px;background:#faf5ff;border-radius:8px;font-size:13px;"><strong>Assinatura Digital</strong> - contratos 100% digitais, sem papel</div>
+          <div style="padding:10px;background:#fffbeb;border-radius:8px;font-size:13px;"><strong>Multi-unidade</strong> - gerencia todas as unidades com login unico</div>
+          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Dashboard de Desempenho</strong> - ocupacao, ticket, inadimplencia em tempo real</div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot">18</div>
-          <div class="timeline-year">2018</div>
-          <div class="timeline-text">Atingidas 100 unidades — consolidação como principal sistema de gestão setorial</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot">20</div>
-          <div class="timeline-year">2020</div>
-          <div class="timeline-text">Pandemia testou a resiliência do setor — self storage demonstrou alta resistência a crises</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot">22</div>
-          <div class="timeline-year">2022</div>
-          <div class="timeline-text">Aceleração do crescimento pós-pandemia; aumento expressivo de novas unidades</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot">24</div>
-          <div class="timeline-year">2024</div>
-          <div class="timeline-text">Superadas 300 unidades no Prisma Box; mercado ultrapassa 180 mil boxes no Brasil</div>
-        </div>
-        <div class="timeline-item" style="margin-bottom:0;">
-          <div class="timeline-dot" style="background:var(--green);">26</div>
-          <div class="timeline-year">2026</div>
-          <div class="timeline-text"><strong>322 unidades · 80.411 boxes · 74,71% de ocupação · Ticket Médio R$491,38</strong></div>
+        <div style="margin-top:16px;padding:14px;background:#0f2847;border-radius:10px;color:#fff;">
+          <div style="font-size:12px;opacity:.8;margin-bottom:4px;">Caso real apresentado no Conecta 2026</div>
+          <div style="font-size:14px;font-weight:700;">&#127975; "Um Showroom que Virou Negocio"</div>
+          <div style="font-size:12px;opacity:.85;margin-top:4px;">Operacao real com 7 unidades de self storage no Brasil - da ideia ao faturamento. Por Bruno Guerriero.</div>
         </div>
       </div>
     </div>
-
     <div class="grid-2">
-      <div class="chart-wrap">
-        <div class="chart-title">Top 5 Participação — Prisma Box</div>
-        <div class="chart-sub">Maiores players por número de unidades</div>
-        <div class="chart-container"><canvas id="top5Chart"></canvas></div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Percepção de Metragem pelo Cliente</div>
-        <div class="chart-sub">O que o cliente acha vs. o que ele realmente aluga</div>
-        <div class="chart-container"><canvas id="perceptionChart"></canvas></div>
-      </div>
+      <div class="chart-wrap"><div class="chart-title">Distribuicao Regional - Unidades no Sistema</div><div class="chart-sub">Total: 322 unidades</div><div class="chart-container"><canvas id="regionDistChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Percepcao de Metragem pelo Cliente</div><div class="chart-sub">O que o cliente acha que precisa vs. o que aluga</div><div class="chart-container"><canvas id="perceptionChart"></canvas></div></div>
     </div>
   </div>
 </section>
-
-<!-- REGIÕES -->
 <section id="regioes" class="bg-alt">
   <div class="container">
     <div class="section-tag">Dados Regionais</div>
-    <h2 class="section-title">Panorama por Região</h2>
-    <p class="section-sub">Desempenho comparado das 5 regiões brasileiras no sistema Prisma Box 2026.</p>
-
-    <div style="overflow-x:auto; margin-bottom:28px;">
+    <h2 class="section-title">Panorama por Regiao</h2>
+    <p class="section-sub">Desempenho comparado das 5 regioes brasileiras - dados do sistema Prisma Box 2026.</p>
+    <div style="overflow-x:auto;margin-bottom:28px;">
       <table class="data-table">
-        <thead>
-          <tr>
-            <th>Região</th>
-            <th>Unidades</th>
-            <th>Boxes</th>
-            <th>ABL (m²)</th>
-            <th>Box Médio</th>
-            <th>Ocupação</th>
-            <th>Ticket Médio</th>
-            <th>Status</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Regiao</th><th>Unidades</th><th>Boxes</th><th>ABL (m2)</th><th>Box Medio</th><th>Ocupacao</th><th>Ticket Medio</th><th>Status</th></tr></thead>
         <tbody>
-          <tr>
-            <td><strong>Sudeste</strong></td>
-            <td>189</td>
-            <td>51.462</td>
-            <td>335.000</td>
-            <td>6,5 m²</td>
-            <td><span class="badge badge-green">77,8%</span></td>
-            <td><strong>R$ 534</strong></td>
-            <td><span class="badge badge-green">Acima da média</span></td>
-          </tr>
-          <tr>
-            <td><strong>Sul</strong></td>
-            <td>65</td>
-            <td>14.875</td>
-            <td>94.000</td>
-            <td>6,3 m²</td>
-            <td><span class="badge badge-green">76,2%</span></td>
-            <td><strong>R$ 482</strong></td>
-            <td><span class="badge badge-green">Acima da média</span></td>
-          </tr>
-          <tr>
-            <td><strong>Nordeste</strong></td>
-            <td>42</td>
-            <td>9.323</td>
-            <td>62.000</td>
-            <td>6,6 m²</td>
-            <td><span class="badge badge-amber">69,4%</span></td>
-            <td><strong>R$ 421</strong></td>
-            <td><span class="badge badge-blue">Em expansão</span></td>
-          </tr>
-          <tr>
-            <td><strong>Centro-Oeste</strong></td>
-            <td>18</td>
-            <td>3.524</td>
-            <td>23.000</td>
-            <td>6,5 m²</td>
-            <td><span class="badge badge-amber">72,1%</span></td>
-            <td><strong>R$ 456</strong></td>
-            <td><span class="badge badge-blue">Em expansão</span></td>
-          </tr>
-          <tr>
-            <td><strong>Norte</strong></td>
-            <td>8</td>
-            <td>1.227</td>
-            <td>11.000</td>
-            <td>9,0 m²</td>
-            <td><span class="badge badge-red">63,2%</span></td>
-            <td><strong>R$ 388</strong></td>
-            <td><span class="badge badge-amber">Alta oportunidade</span></td>
-          </tr>
-          <tr style="background:#f8fafc; font-weight:700;">
-            <td><strong>TOTAL BRASIL</strong></td>
-            <td><strong>322</strong></td>
-            <td><strong>80.411</strong></td>
-            <td><strong>524.953</strong></td>
-            <td><strong>6,09 m²</strong></td>
-            <td><span class="badge badge-green"><strong>74,71%</strong></span></td>
-            <td><strong>R$ 491,38</strong></td>
-            <td>—</td>
-          </tr>
+          <tr><td><strong>Sudeste</strong></td><td>189</td><td>51.462</td><td>335.000</td><td>6,5 m2</td><td><span class="badge badge-green">77,8%</span></td><td><strong>R$ 534</strong></td><td><span class="badge badge-green">Acima da media</span></td></tr>
+          <tr><td><strong>Sul</strong></td><td>65</td><td>14.875</td><td>94.000</td><td>6,3 m2</td><td><span class="badge badge-green">76,2%</span></td><td><strong>R$ 482</strong></td><td><span class="badge badge-green">Acima da media</span></td></tr>
+          <tr><td><strong>Nordeste</strong></td><td>42</td><td>9.323</td><td>62.000</td><td>6,6 m2</td><td><span class="badge badge-amber">69,4%</span></td><td><strong>R$ 421</strong></td><td><span class="badge badge-blue">Em expansao</span></td></tr>
+          <tr><td><strong>Centro-Oeste</strong></td><td>18</td><td>3.524</td><td>23.000</td><td>6,5 m2</td><td><span class="badge badge-amber">72,1%</span></td><td><strong>R$ 456</strong></td><td><span class="badge badge-blue">Em expansao</span></td></tr>
+          <tr><td><strong>Norte</strong></td><td>8</td><td>1.227</td><td>11.000</td><td>9,0 m2</td><td><span class="badge badge-red">63,2%</span></td><td><strong>R$ 388</strong></td><td><span class="badge badge-amber">Alta oportunidade</span></td></tr>
+          <tr style="background:#f8fafc;font-weight:700;"><td><strong>TOTAL</strong></td><td><strong>322</strong></td><td><strong>80.411</strong></td><td><strong>524.953</strong></td><td><strong>6,09 m2</strong></td><td><span class="badge badge-green"><strong>74,71%</strong></span></td><td><strong>R$ 491,38</strong></td><td>-</td></tr>
         </tbody>
       </table>
     </div>
-
     <div class="grid-2">
-      <div class="chart-wrap">
-        <div class="chart-title">Ocupação por Região (%)</div>
-        <div class="chart-sub">Média nacional: 74,71% · Referência EUA: 77%</div>
-        <div class="chart-container"><canvas id="occupancyChart"></canvas></div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-title">Ticket Médio por Região (R$)</div>
-        <div class="chart-sub">Variação regional de R$388 a R$534</div>
-        <div class="chart-container"><canvas id="ticketChart"></canvas></div>
-      </div>
+      <div class="chart-wrap"><div class="chart-title">Ocupacao por Regiao (%)</div><div class="chart-sub">Media nacional 74,71% - Referencia EUA 77%</div><div class="chart-container"><canvas id="occupancyChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Ticket Medio por Regiao (R$)</div><div class="chart-sub">Variacao de R$388 (Norte) a R$534 (Sudeste)</div><div class="chart-container"><canvas id="ticketChart"></canvas></div></div>
     </div>
   </div>
 </section>
-
-<!-- COMPARATIVO 2025 vs 2026 -->
 <section id="comparativo">
   <div class="container">
-    <div class="section-tag">Análise Evolutiva</div>
+    <div class="section-tag">Analise Evolutiva</div>
     <h2 class="section-title">Conecta 2025 vs Conecta 2026</h2>
-    <p class="section-sub">Comparativo direto dos indicadores apresentados nos dois congressos anuais do setor de self storage.</p>
-
+    <p class="section-sub">Comparativo direto dos indicadores dos dois congressos anuais do setor.</p>
     <div class="card" style="margin-bottom:28px;">
       <div class="compare-grid">
-        <div class="compare-col">
+        <div>
           <div class="compare-year" style="background:var(--blue);">Conecta 2025</div>
-          <div class="compare-item">
-            <span class="compare-metric">Unidades Prisma Box</span>
-            <span class="compare-val">304</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Total Brasil (est.)</span>
-            <span class="compare-val">~525</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Boxes Prisma</span>
-            <span class="compare-val">~71.000</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Ocupação Média</span>
-            <span class="compare-val">72,73%</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">ABL Total</span>
-            <span class="compare-val">~470.000 m²</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Ticket Médio</span>
-            <span class="compare-val">~R$ 430</span>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Box Médio</span>
-            <span class="compare-val">~6,2 m²</span>
-          </div>
+          <div class="compare-item"><span class="compare-metric">Unidades Prisma Box</span><span class="compare-val">304</span></div>
+          <div class="compare-item"><span class="compare-metric">Total Brasil (est.)</span><span class="compare-val">~525</span></div>
+          <div class="compare-item"><span class="compare-metric">Boxes Prisma</span><span class="compare-val">~71.000</span></div>
+          <div class="compare-item"><span class="compare-metric">Ocupacao Media</span><span class="compare-val">72,73%</span></div>
+          <div class="compare-item"><span class="compare-metric">ABL Total</span><span class="compare-val">~470.000 m2</span></div>
+          <div class="compare-item"><span class="compare-metric">Ticket Medio</span><span class="compare-val">~R$ 430</span></div>
         </div>
         <div class="compare-divider"></div>
-        <div class="compare-col">
+        <div>
           <div class="compare-year" style="background:var(--green);">Conecta 2026</div>
-          <div class="compare-item">
-            <span class="compare-metric">Unidades Prisma Box</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">322</span><span class="delta-arrow delta-up">▲ +6%</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Total Brasil (est.)</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">~620</span><span class="delta-arrow delta-up">▲ +18%</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Boxes Prisma</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">80.411</span><span class="delta-arrow delta-up">▲ +13%</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Ocupação Média</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">74,71%</span><span class="delta-arrow delta-up">▲ +2pp</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">ABL Total</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">524.953 m²</span><span class="delta-arrow delta-up">▲ +12%</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Ticket Médio</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">R$ 491,38</span><span class="delta-arrow delta-up">▲ +14%</span></div>
-          </div>
-          <div class="compare-item">
-            <span class="compare-metric">Box Médio</span>
-            <div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">6,09 m²</span><span class="delta-arrow delta-dn">▼ -0,11m²</span></div>
-          </div>
+          <div class="compare-item"><span class="compare-metric">Unidades Prisma Box</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">322</span><span class="delta-arrow delta-up">&#9650; +6%</span></div></div>
+          <div class="compare-item"><span class="compare-metric">Total Brasil (est.)</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">~620</span><span class="delta-arrow delta-up">&#9650; +18%</span></div></div>
+          <div class="compare-item"><span class="compare-metric">Boxes Prisma</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">80.411</span><span class="delta-arrow delta-up">&#9650; +13%</span></div></div>
+          <div class="compare-item"><span class="compare-metric">Ocupacao Media</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">74,71%</span><span class="delta-arrow delta-up">&#9650; +2pp</span></div></div>
+          <div class="compare-item"><span class="compare-metric">ABL Total</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">524.953 m2</span><span class="delta-arrow delta-up">&#9650; +12%</span></div></div>
+          <div class="compare-item"><span class="compare-metric">Ticket Medio</span><div style="display:flex;align-items:center;gap:8px;"><span class="compare-val">R$ 491,38</span><span class="delta-arrow delta-up">&#9650; +14%</span></div></div>
         </div>
       </div>
     </div>
-
-    <div class="chart-wrap">
-      <div class="chart-title">Variação dos Principais Indicadores 2025 → 2026</div>
-      <div class="chart-sub">Crescimento percentual comparado ao Conecta 2025</div>
-      <div class="chart-container" style="height:300px;"><canvas id="compareChart"></canvas></div>
+    <div class="chart-wrap"><div class="chart-title">Variacao dos Principais Indicadores 2025 para 2026 (%)</div><div class="chart-sub">Crescimento percentual contra Conecta 2025</div><div class="chart-container" style="height:280px;"><canvas id="compareChart"></canvas></div></div>
+  </div>
+</section>
+<section id="pagamentos" class="bg-alt">
+  <div class="container">
+    <div class="section-tag">Cobranca &amp; Recebimento</div>
+    <h2 class="section-title">Meios de Pagamento 2026</h2>
+    <p class="section-sub">O setor esta em transicao acelerada do boleto para o PIX. Quem dominar o meio de pagamento domina o fluxo de caixa.</p>
+    <div class="grid-3" style="margin-bottom:28px;">
+      <div class="card" style="text-align:center;border-top:3px solid var(--red);"><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Boleto - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">50,26%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--red);margin-top:6px;">53,36% do valor recebido</div></div>
+      <div class="card" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">PIX - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">38,54%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--green);margin-top:6px;">34,59% do valor recebido</div></div>
+      <div class="card" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:8px;">Cartao - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">6,60%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--blue);margin-top:6px;">5,44% do valor recebido</div></div>
     </div>
-
-    <div class="card" style="margin-top:28px; border-left:4px solid var(--green);">
-      <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:12px;">📊 Análise: O que Mudou em 12 Meses?</h3>
-      <p style="font-size:14px; color:var(--text2); line-height:1.7;">
-        O Conecta 2026 mostrou um mercado em franca maturação. A ocupação subindo para <strong>74,71%</strong> (de 72,73%) indica que a demanda cresce mais rápido que a oferta.
-        O ticket médio de <strong>R$491,38</strong> representa uma valorização real de 14% — consistente com um setor que começa a trabalhar com precificação dinâmica.
-        O box médio ligeiramente menor (6,09 vs 6,2 m²) reflete a entrada de novos players focados em micro-storage e a diversificação da base de clientes pessoa física.
-      </p>
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="chart-wrap"><div class="chart-title">Participacao por Meio de Pagamento (2026)</div><div class="chart-sub">% das quantidades - Jan-Abr 2026</div><div class="chart-container"><canvas id="paymentChart2026"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Evolucao dos Meios de Pagamento (2020-2026)</div><div class="chart-sub">Migracao do Boleto para o PIX</div><div class="chart-container"><canvas id="paymentEvolutionChart"></canvas></div></div>
+    </div>
+    <div class="card" style="background:linear-gradient(135deg,#0f2847,#059669);color:#fff;border:none;">
+      <div class="grid-2">
+        <div><h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Grande Transicao</h3><p style="font-size:14px;line-height:1.7;opacity:.95;">"<strong>O futuro nao e escolher como cobrar. E nao precisar cobrar.</strong>"</p><div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.12);border-radius:10px;"><div style="font-size:13px;font-weight:700;margin-bottom:6px;">PIX Automatico - A proxima fronteira</div><div style="font-size:13px;opacity:.9;">Com PIX automatico: mais recebimento, menos inadimplencia.</div></div></div>
+        <div><h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Trajetoria</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2020:</span> Boleto ~80% - PIX ~0%</div><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2021-22:</span> PIX ganha espaco rapidamente</div><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2026:</span> Boleto 50% / PIX 38% - convergencia iminente</div></div></div>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- IA -->
+<section id="preco-m2">
+  <div class="container">
+    <div class="section-tag">Valorizacao Real</div>
+    <h2 class="section-title">Preco do m2 vs Inflacao</h2>
+    <p class="section-sub">O self storage no Brasil nao e so reposicao inflacionaria - e ganho de valor percebido. O preco do m2 superou o IPCA em +12 pontos percentuais.</p>
+    <div class="grid-3" style="margin-bottom:28px;">
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:42px;font-weight:800;color:var(--blue);">+48%</div><div style="font-size:13px;color:var(--text2);">alta do preco do m2</div><div style="font-size:11px;color:var(--text3);">Jan/2020 - Abr/2026</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--red);"><div style="font-size:42px;font-weight:800;color:var(--red);">+36%</div><div style="font-size:13px;color:var(--text2);">inflacao acumulada (IPCA)</div><div style="font-size:11px;color:var(--text3);">mesmo periodo</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:42px;font-weight:800;color:var(--green);">+12pp</div><div style="font-size:13px;color:var(--text2);">diferencial real</div><div style="font-size:11px;color:var(--text3);">acima da inflacao</div></div>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:28px;"><div class="chart-title">Preco do m2 vs IPCA (Base 100 = Jan/2020)</div><div class="chart-sub">Evolucao nacional - todas as operacoes Prisma Box - Jan/2020 a Abr/2026</div><div class="chart-container" style="height:300px;"><canvas id="priceVsInflationChart"></canvas></div></div>
+    <div class="grid-2">
+      <div class="card" style="border-left:4px solid var(--green);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Hedge contra Inflacao</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">O preco medio do m2 subiu <strong>+48%</strong> enquanto o IPCA acumulou <strong>+36%</strong>. Diferencial de <strong>+12pp</strong> acima da inflacao.</p></div>
+      <div class="card" style="border-left:4px solid var(--blue);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Insight Prisma Box</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">"O self storage no Brasil nao e so reposicao inflacionaria. <strong>E ganho de valor percebido.</strong>" - Analise Prisma Box</p></div>
+    </div>
+  </div>
+</section>
 <section id="ia" class="bg-alt">
   <div class="container">
-    <div class="section-tag">Tecnologia & Inovação</div>
-    <h2 class="section-title">Inteligência Artificial no Self Storage</h2>
-    <p class="section-sub">O Conecta 2026 dedicou sessões inteiras à IA — de precificação dinâmica a combate à inadimplência. "A IA precisa de combustível: dados."</p>
-
+    <div class="section-tag">Tecnologia &amp; Inovacao</div>
+    <h2 class="section-title">Inteligencia Artificial no Self Storage</h2>
+    <p class="section-sub">O Conecta 2026 dedicou sessoes a IA. "A IA precisa de combustivel: dados."</p>
     <div class="grid-3" style="margin-bottom:28px;">
-      <div class="card" style="border-top:3px solid var(--blue);">
-        <div style="font-size:28px; margin-bottom:12px;">💰</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:8px;">Precificação Dinâmica</h3>
-        <p style="font-size:13px; color:var(--text2); line-height:1.6;">IA analisa demanda, sazonalidade e concorrência em tempo real. Migração de modelo reativo para preditivo — ajuste de preço antes da queda de ocupação.</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--red);">
-        <div style="font-size:28px; margin-bottom:12px;">⚡</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:8px;">Combate à Inadimplência</h3>
-        <p style="font-size:13px; color:var(--text2); line-height:1.6;">Modelos preditivos identificam risco antes do atraso. Automação de cobrança com régua inteligente: SMS, WhatsApp, e-mail em timing otimizado.</p>
-      </div>
-      <div class="card" style="border-top:3px solid var(--green);">
-        <div style="font-size:28px; margin-bottom:12px;">🤖</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:8px;">Chatbots & Atendimento</h3>
-        <p style="font-size:13px; color:var(--text2); line-height:1.6;">IA no WhatsApp para qualificação de leads, agendamento de visitas e renovação de contratos. Redução do CAC e aumento da taxa de conversão.</p>
-      </div>
+      <div class="card" style="border-top:3px solid var(--blue);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Precificacao Dinamica</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA analisa demanda, sazonalidade e concorrencia em tempo real.</p></div>
+      <div class="card" style="border-top:3px solid var(--red);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Combate a Inadimplencia</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">Modelos preditivos identificam risco antes do atraso.</p></div>
+      <div class="card" style="border-top:3px solid var(--green);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Chatbots &amp; Atendimento</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA no WhatsApp para leads, agendamentos e renovacoes.</p></div>
     </div>
-
-    <div class="chart-wrap" style="margin-bottom:28px;">
-      <div class="chart-title">Os Gigantes da IA — Comparativo</div>
-      <div class="chart-sub">Ferramentas apresentadas no Conecta 2026</div>
-      <div style="overflow-x:auto; margin-top:16px;">
-        <table class="ai-table">
-          <thead>
-            <tr>
-              <th>Plataforma</th>
-              <th>Melhor Para</th>
-              <th>Pontos Fortes</th>
-              <th>Limitações</th>
-              <th>Recomendação</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>ChatGPT (OpenAI)</strong></td>
-              <td>Atendimento, copywriting, análise</td>
-              <td>Maior ecossistema de integrações; plugins robustos</td>
-              <td>Custo elevado nos planos avançados</td>
-              <td><span class="badge badge-green">Alta</span></td>
-            </tr>
-            <tr>
-              <td><strong>Claude (Anthropic)</strong></td>
-              <td>Análise de contratos, documentos longos</td>
-              <td>Contexto longo; melhor em raciocínio; mais seguro</td>
-              <td>Menos plugins vs. ChatGPT</td>
-              <td><span class="badge badge-green">Alta</span></td>
-            </tr>
-            <tr>
-              <td><strong>Gemini (Google)</strong></td>
-              <td>Integração Google Workspace</td>
-              <td>Nativo em Gmail, Docs, Sheets; gratuito</td>
-              <td>Qualidade inferior em tarefas complexas</td>
-              <td><span class="badge badge-blue">Média</span></td>
-            </tr>
-            <tr>
-              <td><strong>Llama 3 (Meta)</strong></td>
-              <td>Uso interno / privado (on-premise)</td>
-              <td>Open source; dados não saem da empresa</td>
-              <td>Exige infraestrutura técnica</td>
-              <td><span class="badge badge-amber">Técnica</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="card" style="background:linear-gradient(135deg,#0f2847,#1d4ed8); color:#fff; border:none;">
-      <h3 style="font-size:16px; font-weight:700; margin-bottom:16px;">💡 Dados Internos vs. Dados Externos</h3>
-      <div class="grid-2">
-        <div>
-          <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#bfdbfe; margin-bottom:8px;">Dados Internos (CRM / ERP)</div>
-          <div class="pill-grid">
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Histórico de pagamentos</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Taxa de renovação</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Tempo médio: 11–13 meses</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Todos contatos do cliente</span>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#bfdbfe; margin-bottom:8px;">Dados Externos (IA + APIs)</div>
-          <div class="pill-grid">
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Score de crédito</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Movimentos imobiliários</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Sazonalidade de mercado</span>
-            <span style="background:rgba(255,255,255,0.15);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;">Preços concorrência</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="chart-wrap"><div class="chart-title">Plataformas de IA - Comparativo</div><div class="chart-sub">Ferramentas apresentadas no Conecta 2026</div><div style="overflow-x:auto;margin-top:16px;"><table class="ai-table"><thead><tr><th>Plataforma</th><th>Melhor Para</th><th>Pontos Fortes</th><th>Limitacoes</th><th>Recom.</th></tr></thead><tbody><tr><td><strong>ChatGPT (OpenAI)</strong></td><td>Atendimento, copywriting</td><td>Maior ecossistema de integracoes</td><td>Custo elevado nos planos avancados</td><td><span class="badge badge-green">Alta</span></td></tr><tr><td><strong>Claude (Anthropic)</strong></td><td>Analise de contratos, docs longos</td><td>Contexto longo; raciocinio superior</td><td>Menos plugins vs. ChatGPT</td><td><span class="badge badge-green">Alta</span></td></tr><tr><td><strong>Gemini (Google)</strong></td><td>Integracao Google Workspace</td><td>Nativo em Gmail, Docs, Sheets</td><td>Qualidade inferior em tarefas complexas</td><td><span class="badge badge-blue">Media</span></td></tr><tr><td><strong>Llama 3 (Meta)</strong></td><td>Uso interno / on-premise</td><td>Open source; dados na empresa</td><td>Exige infraestrutura tecnica</td><td><span class="badge badge-amber">Tecnica</span></td></tr></tbody></table></div></div>
   </div>
 </section>
-
-<!-- SEGUROS -->
 <section id="seguros">
   <div class="container">
-    <div class="section-tag">Proteção & Cobertura</div>
-    <h2 class="section-title">Seguros — Fast Track JR&amp;Marto + HDI</h2>
-    <p class="section-sub">Parceria apresentada no Conecta 2026 para simplificar a venda de seguros no self storage com processo em 4 etapas.</p>
-
+    <div class="section-tag">Protecao &amp; Cobertura</div>
+    <h2 class="section-title">Seguros no Self Storage</h2>
+    <p class="section-sub">Dados reais do sistema Prisma Box (2025): R$ 2.119,84/m2 de valor medio guardado. Declarar valor <strong>dobra</strong> a adesao ao seguro.</p>
     <div class="grid-4" style="margin-bottom:28px;">
-      <div class="card-sm" style="text-align:center; border-top:3px solid var(--blue);">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px;">1</div>
-        <div style="font-weight:700;font-size:14px;color:var(--navy);">Cadastro</div>
-        <div style="font-size:12px;color:var(--text2);margin-top:4px;">Registro do cliente e coleta de todos os meios de contato (incluindo rede social)</div>
-      </div>
-      <div class="card-sm" style="text-align:center; border-top:3px solid var(--sky);">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--sky);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px;">2</div>
-        <div style="font-weight:700;font-size:14px;color:var(--navy);">Declaração</div>
-        <div style="font-size:12px;color:var(--text2);margin-top:4px;">Cliente declara valor do bem armazenado. Seguro mínimo obrigatório por faixa de metragem.</div>
-      </div>
-      <div class="card-sm" style="text-align:center; border-top:3px solid var(--green);">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px;">3</div>
-        <div style="font-weight:700;font-size:14px;color:var(--navy);">Emissão</div>
-        <div style="font-size:12px;color:var(--text2);margin-top:4px;">Apólice emitida automaticamente via sistema integrado ao Prisma Box</div>
-      </div>
-      <div class="card-sm" style="text-align:center; border-top:3px solid var(--amber);">
-        <div style="width:40px;height:40px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px;">4</div>
-        <div style="font-weight:700;font-size:14px;color:var(--navy);">Renovação</div>
-        <div style="font-size:12px;color:var(--text2);margin-top:4px;">Renovação automática junto com o contrato de locação. Sem fricção.</div>
-      </div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:32px;font-weight:800;color:var(--navy);">R$2.119</div><div style="font-size:13px;color:var(--text2);">valor medio guardado/m2</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:32px;font-weight:800;color:var(--green);">R$6,78</div><div style="font-size:13px;color:var(--text2);">premio medio do seguro/m2</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:32px;font-weight:800;color:var(--blue);">77,56%</div><div style="font-size:13px;color:var(--text2);">contratos com seguro (2025)</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:32px;font-weight:800;color:var(--amber);">2x</div><div style="font-size:13px;color:var(--text2);">mais seguro com valor declarado</div></div>
     </div>
-
-    <div class="grid-2">
-      <div class="chart-wrap">
-        <div class="chart-title">Seguro Mínimo por Metragem (R$)</div>
-        <div class="chart-sub">Valores mínimos de cobertura obrigatória</div>
-        <div class="chart-container"><canvas id="seguroChart"></canvas></div>
-      </div>
-      <div class="card" style="align-self:start;">
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:16px;">Coberturas vs. Exclusões</h3>
-        <div style="margin-bottom:16px;">
-          <div style="font-size:12px; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:10px;">✅ Coberturas Principais</div>
-          <div class="pill-grid">
-            <span class="pill pill-green">Incêndio & explosão</span>
-            <span class="pill pill-green">Roubo e furto qualificado</span>
-            <span class="pill pill-green">Danos elétricos</span>
-            <span class="pill pill-green">Infiltração súbita</span>
-            <span class="pill pill-green">Responsabilidade civil</span>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:12px; font-weight:700; color:var(--red); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:10px;">❌ Exclusões Importantes</div>
-          <div class="pill-grid">
-            <span class="pill pill-red">Itens ilegais</span>
-            <span class="pill pill-red">Umidade em espaço semiaberto</span>
-            <span class="pill pill-red">Desgaste natural</span>
-            <span class="pill pill-red">Valores não declarados</span>
-          </div>
-        </div>
-        <div style="margin-top:16px; padding:12px; background:#fffbeb; border-radius:8px; border:1px solid #fde68a;">
-          <p style="font-size:12px; color:#92400e;"><strong>⚠️ Atenção:</strong> Sensor de fumaça é item fundamental para cobertura de sinistro. Inclua cláusula de multa por armazenamento de itens ilegais no contrato.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- JURÍDICO -->
-<section id="juridico" class="bg-alt">
-  <div class="container">
-    <div class="section-tag">Aspectos Jurídicos</div>
-    <h2 class="section-title">Contrato & Tributário</h2>
-    <p class="section-sub">Pontos-chave discutidos no congresso para proteção jurídica do operador e adequação ao ambiente regulatório.</p>
-
     <div class="grid-2" style="margin-bottom:28px;">
       <div class="card">
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:16px;">📋 Checklist do Contrato</h3>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Cláusula de reequilíbrio financeiro</strong><br><span style="font-size:12px;color:var(--text2);">Obrigatória antes de 1/1/2027 — alinha contrato à Reforma Tributária</span></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Cláusula de direito ao crédito</strong><br><span style="font-size:12px;color:var(--text2);">Para fornecedores — garante repasse dos créditos tributários</span></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Cláusula de rateio</strong><br><span style="font-size:12px;color:var(--text2);">Define responsabilidade por custos comuns e áreas compartilhadas</span></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Multa por armazenamento ilegal</strong><br><span style="font-size:12px;color:var(--text2);">Proteção jurídica do operador contra uso indevido do espaço</span></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Endereço fiscal (R$220/mês)</strong><br><span style="font-size:12px;color:var(--text2);">Serviço adicional com receita recorrente; mínimo de R$220/mês</span></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:flex-start;">
-            <span style="color:var(--green);font-size:16px;flex-shrink:0;">✓</span>
-            <div><strong style="font-size:13px;">Todos os meios de contato</strong><br><span style="font-size:12px;color:var(--text2);">Coletar: telefone, e-mail, WhatsApp e redes sociais — aumenta recuperação de inadimplentes</span></div>
-          </div>
-        </div>
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">% de Contratos com Seguro por Regiao</h3>
+        <div class="seg-region-bar"><span class="seg-region-name">Sudeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:81.45%;background:var(--blue);"></div></div><span class="seg-region-pct" style="color:var(--blue);">81,45%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Norte</span><div class="seg-region-track"><div class="seg-region-fill" style="width:63.08%;background:var(--green);"></div></div><span class="seg-region-pct" style="color:var(--green);">63,08%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Nordeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:62.92%;background:var(--sky);"></div></div><span class="seg-region-pct" style="color:var(--sky);">62,92%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Sul</span><div class="seg-region-track"><div class="seg-region-fill" style="width:60.84%;background:var(--purple);"></div></div><span class="seg-region-pct" style="color:var(--purple);">60,84%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Centro-Oeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:52.93%;background:var(--amber);"></div></div><span class="seg-region-pct" style="color:var(--amber);">52,93%</span></div>
+        <div style="margin-top:16px;padding:10px;background:#fef3c7;border-radius:8px;font-size:12px;color:#92400e;"><strong>Oportunidade:</strong> Centro-Oeste e Sul tem a maior lacuna.</div>
       </div>
-      <div class="card" style="border-left:4px solid var(--amber);">
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:16px;">⚡ Reforma Tributária — Alerta</h3>
-        <div style="background:#fffbeb;border-radius:12px;padding:16px;margin-bottom:16px;">
-          <div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:6px;">Data Crítica: 1/1/2027</div>
-          <p style="font-size:13px;color:#78350f;">Todos os contratos devem ser revisados e adaptados <strong>antes de 2027</strong>. A Reforma Tributária altera a estrutura de tributação do setor.</p>
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Sem vs Com Valor Declarado</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+          <div style="padding:16px;background:#fef2f2;border-radius:12px;text-align:center;border:2px dashed var(--red);"><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Sem declarar</div><div style="font-size:32px;font-weight:800;color:var(--red);">30-50%</div><div style="font-size:12px;color:var(--text2);">com seguro</div></div>
+          <div style="padding:16px;background:#f0fdf4;border-radius:12px;text-align:center;border:2px solid var(--green);"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Com declaracao</div><div style="font-size:32px;font-weight:800;color:var(--green);">70-85%</div><div style="font-size:12px;color:var(--text2);">com seguro</div></div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;">
-            <strong>Códigos de atividade:</strong> verificar enquadramento correto no novo sistema de classificação
-          </div>
-          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;">
-            <strong>IBS/CBS:</strong> impacto nos contratos de longo prazo — necessário reequilíbrio
-          </div>
-          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;">
-            <strong>Split payment:</strong> impacto no fluxo de caixa — preparar capital de giro adequado
-          </div>
-        </div>
+        <div style="padding:12px;background:var(--navy);border-radius:10px;color:#fff;text-align:center;"><div style="font-size:13px;font-weight:700;">Declarar valor dobra a adesao ao seguro</div></div>
       </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="chart-wrap"><div class="chart-title">Adesao ao Seguro - Evolucao 2020-2025</div><div class="chart-sub">Com vs Sem valor declarado</div><div class="chart-container"><canvas id="adherenceChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Evolucao das Medias Gerais de Seguro (2020-2025)</div><div class="chart-sub">% com seguro e premio medio/m2</div><div class="chart-container"><canvas id="seguroEvolChart"></canvas></div></div>
+    </div>
+    <div class="grid-2">
+      <div class="chart-wrap"><div class="chart-title">Cobertura Minima Obrigatoria por Metragem (R$)</div><div class="chart-sub">Fast Track JR&amp;Marto + HDI</div><div class="chart-container"><canvas id="seguroChart"></canvas></div></div>
+      <div class="card" style="align-self:start;"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;">Coberturas vs. Exclusoes</h3><div style="margin-bottom:12px;"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Coberturas</div><div class="pill-grid"><span class="pill pill-green">Incendio &amp; explosao</span><span class="pill pill-green">Roubo e furto</span><span class="pill pill-green">Danos eletricos</span><span class="pill pill-green">Infiltracao subita</span></div></div><div><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Exclusoes</div><div class="pill-grid"><span class="pill pill-red">Itens ilegais</span><span class="pill pill-red">Umidade semiaberto</span><span class="pill pill-red">Desgaste natural</span></div></div><div style="margin-top:12px;padding:10px;background:#fffbeb;border-radius:8px;border:1px solid #fde68a;font-size:12px;color:#92400e;"><strong>Atencao:</strong> Sensor de fumaca e requisito para cobertura.</div></div>
     </div>
   </div>
 </section>
-
-<!-- INADIMPLÊNCIA -->
+<section id="juridico" class="bg-alt">
+  <div class="container">
+    <div class="section-tag">Aspectos Juridicos</div>
+    <h2 class="section-title">Contrato &amp; Tributario</h2>
+    <p class="section-sub">Pontos-chave para protecao juridica. Alerta: <strong>Reforma Tributaria - prazo 1/1/2027.</strong></p>
+    <div class="grid-2">
+      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Checklist do Contrato</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de reequilibrio financeiro</strong><br><span style="font-size:12px;color:var(--text2);">Obrigatoria antes de 1/1/2027</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de direito ao credito</strong><br><span style="font-size:12px;color:var(--text2);">Para fornecedores - repasse tributario</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Multa por armazenamento ilegal</strong><br><span style="font-size:12px;color:var(--text2);">Protecao juridica do operador</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Endereco fiscal (R$220/mes)</strong><br><span style="font-size:12px;color:var(--text2);">Receita recorrente extra</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Todos os meios de contato</strong><br><span style="font-size:12px;color:var(--text2);">Telefone, e-mail, WhatsApp e redes sociais</span></div></div></div></div>
+      <div class="card" style="border-left:4px solid var(--amber);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Reforma Tributaria - Alerta</h3><div style="background:#fffbeb;border-radius:10px;padding:14px;margin-bottom:14px;"><div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:4px;">Data Critica: 1/1/2027</div><p style="font-size:13px;color:#78350f;">Todos os contratos precisam ser revisados <strong>antes de 2027</strong>.</p></div><div style="display:flex;flex-direction:column;gap:8px;"><div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>IBS/CBS:</strong> impacto nos contratos de longo prazo</div><div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Split payment:</strong> impacto no fluxo de caixa</div></div></div>
+    </div>
+  </div>
+</section>
 <section id="inadimplencia">
   <div class="container">
-    <div class="section-tag">Gestão de Cobrança</div>
-    <h2 class="section-title">Inadimplência no Self Storage</h2>
-    <p class="section-sub">Dados e estratégias apresentados no Conecta 2026 para reduzir inadimplência e recuperar receita de forma eficiente.</p>
-
+    <div class="section-tag">Gestao de Cobranca</div>
+    <h2 class="section-title">Inadimplencia no Self Storage</h2>
+    <p class="section-sub">70% dos inadimplentes pagam em ate 7 dias com o contato certo. PIX automatico reduz inadimplencia.</p>
     <div class="grid-4" style="margin-bottom:28px;">
-      <div class="card-sm" style="text-align:center;">
-        <div style="font-size:36px;font-weight:800;color:var(--green);">70%</div>
-        <div style="font-size:13px;color:var(--text2);margin-top:4px;">pagam em até 7 dias</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:4px;">após contato/lembrete</div>
-      </div>
-      <div class="card-sm" style="text-align:center;">
-        <div style="font-size:36px;font-weight:800;color:var(--blue);">11–13</div>
-        <div style="font-size:13px;color:var(--text2);margin-top:4px;">meses de permanência</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:4px;">tempo médio do cliente</div>
-      </div>
-      <div class="card-sm" style="text-align:center;">
-        <div style="font-size:36px;font-weight:800;color:var(--amber);">48h</div>
-        <div style="font-size:13px;color:var(--text2);margin-top:4px;">tempo ideal para 1º contato</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:4px;">após vencimento</div>
-      </div>
-      <div class="card-sm" style="text-align:center;">
-        <div style="font-size:36px;font-weight:800;color:var(--red);">3x</div>
-        <div style="font-size:13px;color:var(--text2);margin-top:4px;">mais caro recuperar</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:4px;">que reter o cliente</div>
-      </div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--green);">70%</div><div style="font-size:13px;color:var(--text2);">pagam em ate 7 dias</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--blue);">11-13</div><div style="font-size:13px;color:var(--text2);">meses de permanencia</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--amber);">48h</div><div style="font-size:13px;color:var(--text2);">1o contato ideal</div></div>
+      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--red);">3x</div><div style="font-size:13px;color:var(--text2);">mais caro recuperar que reter</div></div>
     </div>
-
     <div class="grid-2">
-      <div class="card">
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:16px;">🤖 IA na Cobrança — Régua Inteligente</h3>
-        <div style="position:relative;padding-left:24px;">
-          <div style="position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--red));"></div>
-          <div style="margin-bottom:16px;">
-            <div style="position:absolute;left:4px;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-top:2px;"></div>
-            <div style="padding-left:16px;">
-              <div style="font-size:12px;font-weight:700;color:var(--blue);">D+1 — WhatsApp automático</div>
-              <div style="font-size:12px;color:var(--text2);">Lembrete amigável via chatbot IA com link de pagamento</div>
-            </div>
-          </div>
-          <div style="margin-bottom:16px;margin-top:16px;">
-            <div style="position:absolute;left:4px;width:12px;height:12px;border-radius:50%;background:var(--sky);margin-top:2px;"></div>
-            <div style="padding-left:16px;">
-              <div style="font-size:12px;font-weight:700;color:var(--sky);">D+3 — SMS + E-mail</div>
-              <div style="font-size:12px;color:var(--text2);">Segundo contato com destaque do valor e vencimento original</div>
-            </div>
-          </div>
-          <div style="margin-bottom:16px;margin-top:16px;">
-            <div style="position:absolute;left:4px;width:12px;height:12px;border-radius:50%;background:var(--amber);margin-top:2px;"></div>
-            <div style="padding-left:16px;">
-              <div style="font-size:12px;font-weight:700;color:var(--amber);">D+7 — Ligação humana</div>
-              <div style="font-size:12px;color:var(--text2);">Atendente humano entra em contato — taxa de sucesso mais alta</div>
-            </div>
-          </div>
-          <div style="margin-top:16px;">
-            <div style="position:absolute;left:4px;width:12px;height:12px;border-radius:50%;background:var(--red);margin-top:2px;"></div>
-            <div style="padding-left:16px;">
-              <div style="font-size:12px;font-weight:700;color:var(--red);">D+15 — Protocolo jurídico</div>
-              <div style="font-size:12px;color:var(--text2);">Notificação formal + aviso de destravamento do espaço</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:16px;">💡 Boas Práticas Aprovadas no Congresso</h3>
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="padding:12px;background:#f0fdf4;border-radius:10px;border-left:3px solid var(--green);">
-            <div style="font-size:13px;font-weight:600;color:var(--navy);">Coletar TODOS os meios de contato</div>
-            <div style="font-size:12px;color:var(--text2);margin-top:4px;">Incluindo redes sociais — aumenta as chances de localizar o inadimplente</div>
-          </div>
-          <div style="padding:12px;background:#eff6ff;border-radius:10px;border-left:3px solid var(--blue);">
-            <div style="font-size:13px;font-weight:600;color:var(--navy);">Análise preditiva de risco</div>
-            <div style="font-size:12px;color:var(--text2);margin-top:4px;">IA identifica padrões de comportamento antes do primeiro atraso</div>
-          </div>
-          <div style="padding:12px;background:#fffbeb;border-radius:10px;border-left:3px solid var(--amber);">
-            <div style="font-size:13px;font-weight:600;color:var(--navy);">Negociação antecipada</div>
-            <div style="font-size:12px;color:var(--text2);margin-top:4px;">Oferecer parcelamento antes que o cliente desapareça — custa menos que cobrança</div>
-          </div>
-          <div style="padding:12px;background:#fef2f2;border-radius:10px;border-left:3px solid var(--red);">
-            <div style="font-size:13px;font-weight:600;color:var(--navy);">Destravamento como último recurso</div>
-            <div style="font-size:12px;color:var(--text2);margin-top:4px;">Protocolo jurídico claro — documentar todo o processo antes do leilão</div>
-          </div>
-        </div>
-      </div>
+      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Regua Inteligente com IA</h3><div style="position:relative;padding-left:24px;"><div style="position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--red));"></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--blue);">D+1 - WhatsApp automatico</div><div style="font-size:12px;color:var(--text2);">Lembrete amigavel com link de pagamento</div></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--sky);">D+3 - SMS + E-mail</div><div style="font-size:12px;color:var(--text2);">Segundo contato com destaque do valor</div></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--amber);">D+7 - Ligacao humana</div><div style="font-size:12px;color:var(--text2);">Maior taxa de sucesso</div></div><div><div style="font-size:12px;font-weight:700;color:var(--red);">D+15 - Protocolo juridico</div><div style="font-size:12px;color:var(--text2);">Notificacao formal + aviso de destravamento</div></div></div></div>
+      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Boas Praticas</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="padding:10px;background:#f0fdf4;border-radius:8px;border-left:3px solid var(--green);font-size:13px;"><strong>Coletar TODOS os contatos</strong> - incluso redes sociais</div><div style="padding:10px;background:#eff6ff;border-radius:8px;border-left:3px solid var(--blue);font-size:13px;"><strong>PIX Automatico</strong> - debito recorrente reduz inadimplencia</div><div style="padding:10px;background:#fffbeb;border-radius:8px;border-left:3px solid var(--amber);font-size:13px;"><strong>Analise preditiva de risco</strong> - IA antes do primeiro atraso</div><div style="padding:10px;background:#fef2f2;border-radius:8px;border-left:3px solid var(--red);font-size:13px;"><strong>Negociacao antecipada</strong> - parcelamento antes do desaparecimento</div></div></div>
     </div>
   </div>
 </section>
-
-<!-- TAKEAWAYS -->
 <section id="takeaways" class="bg-alt">
   <div class="container">
-    <div class="section-tag">Conclusões</div>
+    <div class="section-tag">Conclusoes</div>
     <h2 class="section-title">Principais Takeaways do Conecta 2026</h2>
-    <p class="section-sub">Os insights mais relevantes do congresso para quem opera ou investe em self storage.</p>
-
+    <p class="section-sub">Os insights mais relevantes para quem opera, investe ou esta estudando o mercado de self storage no Brasil.</p>
     <div class="takeaway-grid">
-      <div class="takeaway-card" style="border-color:var(--blue);">
-        <div class="takeaway-num" style="color:var(--blue);">01 — Mercado</div>
-        <div class="takeaway-text">O Brasil tem <strong>apenas 1/10 da densidade</strong> de self storage dos EUA — enorme espaço para crescimento, especialmente no Norte, Nordeste e Centro-Oeste.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--green);">
-        <div class="takeaway-num" style="color:var(--green);">02 — Precificação</div>
-        <div class="takeaway-text">Setor em transição de <strong>precificação reativa para preditiva</strong>. Quem implementar IA agora sai na frente — diferencial competitivo por 2–3 anos.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--amber);">
-        <div class="takeaway-num" style="color:var(--amber);">03 — Seguros</div>
-        <div class="takeaway-text"><strong>Seguro mínimo obrigatório</strong> e sensor de fumaça são requisitos básicos. Fast Track JR&amp;Marto + HDI simplifica a oferta ao cliente final.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--red);">
-        <div class="takeaway-num" style="color:var(--red);">04 — Jurídico</div>
-        <div class="takeaway-text">Revisão contratual urgente: <strong>cláusula de reequilíbrio financeiro</strong> precisa estar nos contratos antes de 1/1/2027 por conta da Reforma Tributária.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--purple);">
-        <div class="takeaway-num" style="color:var(--purple);">05 — Inadimplência</div>
-        <div class="takeaway-text"><strong>70% dos inadimplentes</strong> pagam em até 7 dias com o contato certo. Régua inteligente de cobrança com IA é obrigatória para qualquer operação.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--sky);">
-        <div class="takeaway-num" style="color:var(--sky);">06 — Dados</div>
-        <div class="takeaway-text">"A IA precisa de combustível: <strong>dados</strong>." Coletar todos os contatos do cliente (telefone, e-mail, WhatsApp, redes sociais) é imperativo.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--green);">
-        <div class="takeaway-num" style="color:var(--green);">07 — Ocupação</div>
-        <div class="takeaway-text">Ocupação média subiu para <strong>74,71%</strong>. A meta setorial é atingir o patamar dos EUA (77%) — possível com precificação dinâmica e marketing digital.</div>
-      </div>
-      <div class="takeaway-card" style="border-color:var(--blue);">
-        <div class="takeaway-num" style="color:var(--blue);">08 — Investimento</div>
-        <div class="takeaway-text">Self storage como <strong>ativo de investimento</strong>: fluxo de caixa previsível, margens consistentes, alta resiliência a crises. Mercado em fase de maturação = melhor janela de entrada.</div>
-      </div>
+      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">01 - Mercado</div><div class="takeaway-text">O Brasil tem <strong>1/10 da densidade</strong> dos EUA. O desafio nao e usar, e <strong>saber o nome</strong>.</div></div>
+      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">02 - Valorizacao</div><div class="takeaway-text">Preco do m2 subiu <strong>+48%</strong> vs IPCA <strong>+36%</strong>. O setor e <strong>hedge contra inflacao</strong>.</div></div>
+      <div class="takeaway-card" style="border-color:var(--red);"><div class="takeaway-num" style="color:var(--red);">03 - Pagamentos</div><div class="takeaway-text">PIX chegou a <strong>38,54%</strong> dos pagamentos. PIX automatico = <strong>menos inadimplencia</strong>.</div></div>
+      <div class="takeaway-card" style="border-color:var(--amber);"><div class="takeaway-num" style="color:var(--amber);">04 - Seguros</div><div class="takeaway-text">Declarar valor <strong>dobra</strong> a adesao ao seguro. Sudeste lidera com 81,45% de contratos segurados.</div></div>
+      <div class="takeaway-card" style="border-color:var(--purple);"><div class="takeaway-num" style="color:var(--purple);">05 - Juridico</div><div class="takeaway-text">Revisao urgente: <strong>clausula de reequilibrio financeiro</strong> obrigatoria antes de 1/1/2027.</div></div>
+      <div class="takeaway-card" style="border-color:var(--sky);"><div class="takeaway-num" style="color:var(--sky);">06 - Dados</div><div class="takeaway-text">"A IA precisa de combustivel: <strong>dados</strong>." Coletar todos os contatos do cliente.</div></div>
+      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">07 - Ocupacao</div><div class="takeaway-text">Ocupacao subiu para <strong>74,71%</strong>. Meta: atingir os EUA (77%) com precificacao dinamica.</div></div>
+      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">08 - Investimento</div><div class="takeaway-text">Fluxo de caixa previsivel. <strong>60%+</strong> dos novos interessados ainda estao estudando o mercado.</div></div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
-  <strong>Conecta Storage 2026</strong> — Relatório do Mercado<br>
-  <span style="font-size:12px;opacity:0.6;margin-top:8px;display:block;">Dados: Prisma Box · ASBRASS · Grand View Research · Precedence Research · Cushman &amp; Wakefield<br>
-  Elaborado com base nas apresentações do congresso realizado em maio de 2026 · São Paulo, Brasil</span>
+  <strong>Conecta Storage 2026</strong> - Relatorio do Mercado<br>
+  <span style="font-size:12px;opacity:0.6;margin-top:8px;display:block;">Dados: Prisma Box (sistema de gestao) - ASBRASS - Grand View Research - Precedence Research - Cushman &amp; Wakefield<br>Congresso Conecta Storage 2026 - Sao Paulo, Brasil</span>
 </footer>
-
 <script>
-Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
-Chart.defaults.color = '#475569';
-
-const BLUE = '#1d4ed8';
-const SKY = '#0ea5e9';
-const GREEN = '#059669';
-const AMBER = '#d97706';
-const RED = '#dc2626';
-const PURPLE = '#7c3aed';
-const NAVY = '#0f2847';
-
-// 1. Global Market Chart
-new Chart(document.getElementById('globalMarketChart'), {
-  type: 'bar',
-  data: {
-    labels: ['2022', '2023', '2024', '2025', '2026 (proj)'],
-    datasets: [{
-      label: 'Mercado Global (USD Bi)',
-      data: [54.6, 58.3, 62.0, 64.0, 67.8],
-      backgroundColor: ['#dbeafe','#dbeafe','#dbeafe','#dbeafe','#bfdbfe'],
-      borderColor: [BLUE, BLUE, BLUE, BLUE, SKY],
-      borderWidth: 2, borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `USD ${c.raw}B` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `$${v}B` }, beginAtZero: false, min: 50 },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 2. USA Occupancy by Region
-new Chart(document.getElementById('usaOccupancyChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Oeste', 'Midwest', 'Nordeste', 'Sul', 'Média EUA'],
-    datasets: [{
-      label: 'Ocupação (%)',
-      data: [79.8, 77.9, 76.7, 75.0, 77.0],
-      backgroundColor: [GREEN, '#34d399', '#6ee7b7', '#a7f3d0', BLUE],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.raw}%` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `${v}%` }, min: 70, max: 85 },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 3. Brasil Boxes Growth
-new Chart(document.getElementById('brasilBoxesChart'), {
-  type: 'bar',
-  data: {
-    labels: ['2021', '2022', '2023', '2024', '2025'],
-    datasets: [{
-      label: 'Boxes (mil)',
-      data: [147.8, 163.0, 181.0, 210.0, 220.9],
-      backgroundColor: [BLUE, BLUE, BLUE, BLUE, GREEN],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: c => `${c.raw}k boxes` } },
-      annotation: {}
-    },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `${v}k` }, beginAtZero: false, min: 130 },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 4. Brasil vs World Projection
-new Chart(document.getElementById('brasilWorldChart'), {
-  type: 'line',
-  data: {
-    labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
-    datasets: [{
-      label: 'Brasil (USD Bi)',
-      data: [1.76, 1.87, 2.00, 2.14, 2.28, 2.40, 2.54],
-      borderColor: BLUE, backgroundColor: 'rgba(29,78,216,0.1)',
-      fill: true, tension: 0.4, pointRadius: 4, pointBackgroundColor: BLUE,
-    }, {
-      label: 'Meta Brasil 2030',
-      data: [null, null, null, null, null, null, 2.54],
-      pointRadius: 8, pointBackgroundColor: GREEN, pointBorderColor: '#fff', pointBorderWidth: 2,
-      showLine: false,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 12 } } }, tooltip: { callbacks: { label: c => `USD ${c.raw}B` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `$${v}B` } },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 5. Prisma Evolution
-new Chart(document.getElementById('prismaEvolutionChart'), {
-  type: 'line',
-  data: {
-    labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
-    datasets: [{
-      label: 'Unidades Prisma',
-      data: [45, 72, 105, 148, 165, 198, 235, 270, 304, 314, 322],
-      borderColor: BLUE, backgroundColor: 'rgba(29,78,216,0.08)',
-      fill: true, tension: 0.4, yAxisID: 'y',
-      pointRadius: 3, pointBackgroundColor: BLUE,
-    }, {
-      label: 'Boxes (mil)',
-      data: [8, 13, 19, 27, 35, 44, 54, 63, 71, 76, 80.4],
-      borderColor: GREEN, backgroundColor: 'transparent',
-      tension: 0.4, yAxisID: 'y2',
-      pointRadius: 3, pointBackgroundColor: GREEN, borderDash: [5,3],
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
-    scales: {
-      y: { position: 'left', grid: { color: '#f1f5f9' }, title: { display: true, text: 'Unidades', font: { size: 11 } } },
-      y2: { position: 'right', grid: { display: false }, ticks: { callback: v => `${v}k` }, title: { display: true, text: 'Boxes (mil)', font: { size: 11 } } },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 6. Region Distribution Doughnut
-new Chart(document.getElementById('regionDistChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Sudeste (189)', 'Sul (65)', 'Nordeste (42)', 'Centro-Oeste (18)', 'Norte (8)'],
-    datasets: [{
-      data: [189, 65, 42, 18, 8],
-      backgroundColor: [BLUE, SKY, GREEN, AMBER, PURPLE],
-      borderWidth: 3, borderColor: '#fff',
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: {
-      legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
-      tooltip: { callbacks: { label: c => `${c.label}: ${c.raw} unidades (${((c.raw/322)*100).toFixed(1)}%)` } }
-    },
-    cutout: '65%'
-  }
-});
-
-// 7. Top 5 Players
-new Chart(document.getElementById('top5Chart'), {
-  type: 'bar',
-  data: {
-    labels: ['GoodStorage', 'Espaço Extra', 'GuardeAqui', 'Box100', 'SpaceLite'],
-    datasets: [{
-      label: 'Unidades',
-      data: [28, 21, 18, 13, 10],
-      backgroundColor: [BLUE, SKY, GREEN, AMBER, PURPLE],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.raw} unidades (${((c.raw/322)*100).toFixed(1)}%)` } } },
-    scales: {
-      x: { grid: { color: '#f1f5f9' }, title: { display: true, text: 'Unidades Prisma Box' } },
-      y: { grid: { display: false } }
-    }
-  }
-});
-
-// 8. Perception Doughnut
-new Chart(document.getElementById('perceptionChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Acha que precisa de mais espaço', 'Aluga o tamanho certo', 'Aluga menor do que precisa'],
-    datasets: [{
-      data: [45, 35, 20],
-      backgroundColor: [RED, GREEN, AMBER],
-      borderWidth: 3, borderColor: '#fff',
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: {
-      legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
-      tooltip: { callbacks: { label: c => `${c.label}: ${c.raw}%` } }
-    },
-    cutout: '60%'
-  }
-});
-
-// 9. Occupancy by Region
-new Chart(document.getElementById('occupancyChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Sudeste', 'Sul', 'Centro-Oeste', 'Nordeste', 'Norte', 'Brasil', 'EUA (ref)'],
-    datasets: [{
-      label: 'Ocupação (%)',
-      data: [77.8, 76.2, 72.1, 69.4, 63.2, 74.71, 77.0],
-      backgroundColor: [GREEN, GREEN, AMBER, AMBER, RED, BLUE, '#94a3b8'],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.raw}%` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `${v}%` }, min: 55, max: 85 },
-      x: { grid: { display: false }, ticks: { font: { size: 11 } } }
-    }
-  }
-});
-
-// 10. Ticket by Region
-new Chart(document.getElementById('ticketChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Sudeste', 'Sul', 'Centro-Oeste', 'Nordeste', 'Norte', 'Média'],
-    datasets: [{
-      label: 'Ticket Médio (R$)',
-      data: [534, 482, 456, 421, 388, 491],
-      backgroundColor: [BLUE, SKY, GREEN, AMBER, PURPLE, NAVY],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `R$ ${c.raw}` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `R$${v}` }, min: 300 },
-      x: { grid: { display: false } }
-    }
-  }
-});
-
-// 11. Comparison 2025 vs 2026
-new Chart(document.getElementById('compareChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Unidades\nPrisma', 'Boxes\nPrisma', 'ABL Total', 'Ticket\nMédio', 'Total\nBrasil'],
-    datasets: [{
-      label: 'Crescimento vs 2025 (%)',
-      data: [6, 13, 12, 14, 18],
-      backgroundColor: [
-        'rgba(29,78,216,0.8)', 'rgba(14,165,233,0.8)',
-        'rgba(5,150,105,0.8)', 'rgba(217,119,6,0.8)', 'rgba(124,58,237,0.8)'
-      ],
-      borderRadius: 10,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `+${c.raw}% vs Conecta 2025` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `+${v}%` }, beginAtZero: true },
-      x: { grid: { display: false }, ticks: { font: { size: 11 } } }
-    }
-  }
-});
-
-// 12. Seguro Chart
-new Chart(document.getElementById('seguroChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Até 3m²', '3 – 10m²', '10 – 15m²', 'Acima 15m²'],
-    datasets: [{
-      label: 'Cobertura Mínima (R$)',
-      data: [2000, 8000, 20000, 40000],
-      backgroundColor: [SKY, BLUE, NAVY, '#0f172a'],
-      borderRadius: 8,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `R$ ${c.raw.toLocaleString('pt-BR')}` } } },
-    scales: {
-      y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => `R$${(v/1000).toFixed(0)}k` }, beginAtZero: true },
-      x: { grid: { display: false } }
-    }
-  }
-});
+Chart.defaults.font.family="'Segoe UI',system-ui,sans-serif";
+Chart.defaults.color='#475569';
+const B='#1d4ed8',S='#0ea5e9',G='#059669',A='#d97706',R='#dc2626',P='#7c3aed',N='#0f2847';
+new Chart(document.getElementById('globalMarketChart'),{type:'bar',data:{labels:['2022','2023','2024','2025','2026 proj'],datasets:[{data:[54.6,58.3,62,64,67.8],backgroundColor:['#dbeafe','#dbeafe','#dbeafe','#dbeafe','#bfdbfe'],borderColor:[B,B,B,B,S],borderWidth:2,borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+v+'B'},min:50,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('usaOccupancyChart'),{type:'bar',data:{labels:['Oeste','Midwest','Nordeste','Sul','Media EUA'],datasets:[{data:[79.8,77.9,76.7,75,77],backgroundColor:[G,'#34d399','#6ee7b7','#a7f3d0',B],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},min:70,max:85,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('brasilBoxesChart'),{type:'bar',data:{labels:['2021','2022','2023','2024','2025'],datasets:[{data:[147.8,163,181,210,220.9],backgroundColor:[B,B,B,B,G],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'k'},min:130,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('brasilWorldChart'),{type:'line',data:{labels:['2024','2025','2026','2027','2028','2029','2030'],datasets:[{label:'Brasil (USD Bi)',data:[1.76,1.87,2.0,2.14,2.28,2.40,2.54],borderColor:B,backgroundColor:'rgba(29,78,216,0.1)',fill:true,tension:0.4,pointRadius:4,pointBackgroundColor:B}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+v+'B'},grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('prismaEvolutionChart'),{type:'line',data:{labels:['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],datasets:[{label:'Unidades',data:[45,72,105,148,165,198,235,270,304,314,322],borderColor:B,backgroundColor:'rgba(29,78,216,0.08)',fill:true,tension:0.4,yAxisID:'y'},{label:'Boxes (mil)',data:[8,13,19,27,35,44,54,63,71,76,80.4],borderColor:G,tension:0.4,yAxisID:'y2',borderDash:[5,3],pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{position:'left',grid:{color:'#f1f5f9'}},y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'k'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('regionDistChart'),{type:'doughnut',data:{labels:['Sudeste (189)','Sul (65)','Nordeste (42)','Centro-Oeste (18)','Norte (8)'],datasets:[{data:[189,65,42,18,8],backgroundColor:[B,S,G,A,P],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+new Chart(document.getElementById('perceptionChart'),{type:'doughnut',data:{labels:['Acha que precisa de mais','Aluga o tamanho certo','Aluga menor que precisa'],datasets:[{data:[45,35,20],backgroundColor:[R,G,A],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+new Chart(document.getElementById('occupancyChart'),{type:'bar',data:{labels:['Sudeste','Sul','C-Oeste','Nordeste','Norte','Brasil','EUA ref'],datasets:[{data:[77.8,76.2,72.1,69.4,63.2,74.71,77],backgroundColor:[G,G,A,A,R,B,'#94a3b8'],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},min:55,max:85,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('ticketChart'),{type:'bar',data:{labels:['Sudeste','Sul','C-Oeste','Nordeste','Norte','Media'],datasets:[{data:[534,482,456,421,388,491],backgroundColor:[B,S,G,A,P,N],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'R$'+v},min:300,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('compareChart'),{type:'bar',data:{labels:['Unidades Prisma','Boxes Prisma','ABL Total','Ticket Medio','Total Brasil'],datasets:[{label:'% vs 2025',data:[6,13,12,14,18],backgroundColor:['rgba(29,78,216,.8)','rgba(14,165,233,.8)','rgba(5,150,105,.8)','rgba(217,119,6,.8)','rgba(124,58,237,.8)'],borderRadius:10}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'+'+c.raw+'% vs 2025'}}},scales:{y:{ticks:{callback:v=>'+'+v+'%'},beginAtZero:true,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('paymentChart2026'),{type:'doughnut',data:{labels:['Boleto (50,26%)','PIX (38,54%)','Cartao (6,60%)','Outros (4,60%)'],datasets:[{data:[50.26,38.54,6.60,4.60],backgroundColor:[R,G,B,'#94a3b8'],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+new Chart(document.getElementById('paymentEvolutionChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2026'],datasets:[{label:'Boleto',data:[80,72,65,58,54,50.26],borderColor:R,tension:0.4,pointRadius:4,pointBackgroundColor:R},{label:'PIX',data:[0,8,16,26,33,38.54],borderColor:G,tension:0.4,pointRadius:4,pointBackgroundColor:G},{label:'Outros',data:[20,20,19,16,13,11.2],borderColor:'#94a3b8',tension:0.4,pointRadius:3,borderDash:[4,3]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{ticks:{callback:v=>v+'%'},min:0,max:90,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('priceVsInflationChart'),{type:'line',data:{labels:['Jan/20','Jul/20','Jan/21','Jul/21','Jan/22','Jul/22','Jan/23','Jul/23','Jan/24','Jul/24','Jan/25','Jul/25','Abr/26'],datasets:[{label:'Preco do m2 (indice)',data:[70,71,75,80,84,88,93,97,100,102,103,104,104],borderColor:B,fill:false,tension:0.4,pointRadius:3,pointBackgroundColor:B},{label:'IPCA Acumulado (indice)',data:[65,66,67,70,73,76,78,80,82,83,84,85,86],borderColor:R,fill:false,tension:0.4,borderDash:[6,3],pointRadius:3,pointBackgroundColor:R}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{min:60,max:115,ticks:{callback:v=>'idx '+v},grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('adherenceChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2025'],datasets:[{label:'Com valor declarado',data:[73,75,77,79,84,86],borderColor:G,backgroundColor:'rgba(5,150,105,0.08)',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:G},{label:'Sem valor declarado',data:[40,33,34,40,47,50],borderColor:R,backgroundColor:'rgba(220,38,38,0.08)',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:R}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{ticks:{callback:v=>v+'%'},min:20,max:95,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('seguroEvolChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2025'],datasets:[{label:'% contratos com seguro',data:[61.68,59.80,61.68,64.80,74.45,77.56],borderColor:G,tension:0.4,pointRadius:4,pointBackgroundColor:G,yAxisID:'y'},{label:'Premio medio/m2 (R$)',data:[6.10,8.93,6.10,6.40,6.49,6.97],borderColor:A,tension:0.4,pointRadius:4,pointBackgroundColor:A,borderDash:[5,3],yAxisID:'y2'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{position:'left',ticks:{callback:v=>v+'%'},min:55,max:85,grid:{color:'#f1f5f9'}},y2:{position:'right',ticks:{callback:v=>'R$'+v},min:5,max:10,grid:{display:false}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('seguroChart'),{type:'bar',data:{labels:['Ate 3m2','3-10m2','10-15m2','Acima 15m2'],datasets:[{data:[2000,8000,20000,40000],backgroundColor:[S,B,N,'#0f172a'],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'R$'+(v/1000)+'k'},beginAtZero:true,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
 </script>
 </body>
 </html>
