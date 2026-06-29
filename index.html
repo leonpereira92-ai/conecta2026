@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conecta Storage 2026 — Relatório Completo do Mercado</title>
+<title>Conecta Storage 2026 â RelatÃ³rio Completo do Mercado</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
 :root{color-scheme:light;--bg:#f0f4f8;--card:#ffffff;--navy:#0f2847;--blue:#1d4ed8;--sky:#0ea5e9;--green:#059669;--amber:#d97706;--red:#dc2626;--purple:#7c3aed;--text:#1e293b;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--border2:#cbd5e1}
@@ -89,24 +89,42 @@ section{padding:60px 0}
 footer{background:var(--navy);color:rgba(255,255,255,0.7);text-align:center;padding:40px 24px;font-size:13px}
 footer strong{color:#fff}
 @media(max-width:640px){.compare-grid{grid-template-columns:1fr}.compare-divider{display:none}}
+.timeline-track{display:flex;margin:20px 0;border-radius:12px;overflow:hidden;}
+.timeline-phase{flex:1;padding:14px 8px;text-align:center;}
+.timeline-days{font-size:12px;font-weight:800;color:#fff;margin-bottom:3px;}
+.timeline-label{font-size:10px;color:rgba(255,255,255,0.88);}
+.zombie-box{background:#0a0a14;border:2px solid var(--red);border-radius:16px;padding:24px;text-align:center;color:#fff;}
+.loc-type{border-radius:14px;padding:20px;border:2px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.regra-ouro{background:linear-gradient(135deg,#7c3aed,#4c1d95);border-radius:16px;padding:28px;color:#fff;text-align:center;}
+.coef-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.coef-label{font-size:12px;color:var(--text2);width:175px;flex-shrink:0;}
+.coef-track{flex:1;height:10px;background:#e2e8f0;border-radius:20px;overflow:hidden;}
+.coef-fill{height:100%;border-radius:20px;}
+.coef-val{font-size:12px;font-weight:700;color:var(--navy);width:70px;text-align:right;}
 </style>
 </head>
 <body>
+
 <nav>
   <span class="nav-brand">&#128230; Conecta Storage 2026</span>
   <a href="#mercado-global">Mercado Global</a>
   <a href="#mercado-brasil">Brasil</a>
   <a href="#prisma-box">Prisma Box</a>
   <a href="#regioes">Regioes</a>
-  <a href="#comparativo">2025&#8596;2026</a>
+  <a href="#comparativo">2025&harr;2026</a>
   <a href="#pagamentos">Pagamentos</a>
   <a href="#preco-m2">Preco M2</a>
+  <a href="#tamanhos">Tamanhos</a>
+  <a href="#localizacao">Localizacao</a>
+  <a href="#marketing">Marketing</a>
   <a href="#ia">IA</a>
   <a href="#seguros">Seguros</a>
   <a href="#juridico">Juridico</a>
   <a href="#inadimplencia">Inadimplencia</a>
   <a href="#takeaways">Takeaways</a>
 </nav>
+
+<!-- HERO -->
 <div class="hero">
   <div class="hero-badge">Relatorio Conecta Storage 2026</div>
   <h1>Self Storage: O Mercado que Cresce Acima do PIB</h1>
@@ -117,9 +135,11 @@ footer strong{color:#fff}
     <div class="kpi-card"><div class="kpi-value">74,71%</div><div class="kpi-label">Ocupacao Media</div><div class="kpi-delta">&#9650; +2pp vs 2025</div></div>
     <div class="kpi-card"><div class="kpi-value">R$491</div><div class="kpi-label">Ticket Medio</div><div class="kpi-delta">&#9650; +14% vs 2025</div></div>
     <div class="kpi-card"><div class="kpi-value">+48%</div><div class="kpi-label">Alta do Preco/m2</div><div class="kpi-delta">&#9650; +12pp acima IPCA</div></div>
-    <div class="kpi-card"><div class="kpi-value">PIX 38,54%</div><div class="kpi-label">Share Pagamentos</div><div class="kpi-delta">&#9650; 2o mais usado 2026</div></div>
+    <div class="kpi-card"><div class="kpi-value">PIX 38,54%</div><div class="kpi-label">Share Pagamentos</div><div class="kpi-delta">&#9650; 2 mais usado em 2026</div></div>
   </div>
 </div>
+
+<!-- MERCADO GLOBAL -->
 <section id="mercado-global">
   <div class="container">
     <div class="section-tag">Contexto Global</div>
@@ -138,11 +158,13 @@ footer strong{color:#fff}
     <div style="margin-top:16px;"><span class="source-pill"><span class="source-dot"></span>Precedence Research 2025</span><span class="source-pill"><span class="source-dot"></span>IMARC Group 2025</span><span class="source-pill"><span class="source-dot"></span>Cushman &amp; Wakefield US 2025</span></div>
   </div>
 </section>
+
+<!-- MERCADO BRASIL -->
 <section id="mercado-brasil" class="bg-alt">
   <div class="container">
     <div class="section-tag">Panorama Nacional</div>
     <h2 class="section-title">Self Storage no Brasil</h2>
-    <p class="section-sub">O Brasil representa 3% do mercado global, mas cresce acima do PIB. O principal desafio: "O dificil nao e usar, mas saber o nome!"</p>
+    <p class="section-sub">O Brasil representa 3% do mercado global, mas cresce acima do PIB. O principal desafio nao e uso &mdash; e consciencia de marca: "O dificil nao e usar, mas saber o nome!"</p>
     <div class="grid-4" style="margin-bottom:32px;">
       <div class="card-sm"><div class="stat-big" style="color:var(--blue);">220.901</div><div class="stat-label">Boxes no Brasil (2025)</div><div class="stat-delta-up">&#9650; +49,5% desde 2021</div></div>
       <div class="card-sm"><div class="stat-big" style="color:var(--blue);">595</div><div class="stat-label">Unidades em operacao</div><div class="stat-delta-up">Em 110 cidades brasileiras</div></div>
@@ -151,10 +173,10 @@ footer strong{color:#fff}
     </div>
     <div class="grid-2" style="margin-bottom:24px;">
       <div class="chart-wrap"><div class="chart-title">Crescimento de Boxes no Brasil (ASBRASS)</div><div class="chart-sub">Evolucao 2021-2025</div><div class="chart-container"><canvas id="brasilBoxesChart"></canvas></div></div>
-      <div class="chart-wrap"><div class="chart-title">Receita Brasil - Projecao 2024-2030 (USD Bi)</div><div class="chart-sub">Grand View Research 2025</div><div class="chart-container"><canvas id="brasilWorldChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Receita Brasil - Projecao 2024-2030</div><div class="chart-sub">USD Bilhoes</div><div class="chart-container"><canvas id="brasilWorldChart"></canvas></div></div>
     </div>
     <div class="card" style="border-left:4px solid var(--amber);">
-      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;">Contexto 2026 - Desafios e Oportunidades</h3>
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;">Contexto 2026 &mdash; Ano de Desafios e Oportunidades</h3>
       <div class="grid-4">
         <div style="padding:12px;background:#fef2f2;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Eleicoes</div><div style="font-size:12px;color:var(--text2);">Impacto no humor do mercado</div></div>
         <div style="padding:12px;background:#fffbeb;border-radius:10px;text-align:center;"><div style="font-size:13px;font-weight:700;color:var(--navy);">Petroleo Alto</div><div style="font-size:12px;color:var(--text2);">Pressao nos custos operacionais</div></div>
@@ -165,65 +187,74 @@ footer strong{color:#fff}
     <div style="margin-top:16px;"><span class="source-pill"><span class="source-dot"></span>ASBRASS 2025</span><span class="source-pill"><span class="source-dot"></span>Grand View Research 2025</span><span class="source-pill"><span class="source-dot"></span>Prisma Box - Conecta Storage 2026</span></div>
   </div>
 </section>
+
+<!-- PRISMA BOX -->
 <section id="prisma-box">
   <div class="container">
     <div class="section-tag">Sistema de Gestao</div>
-    <h2 class="section-title">Prisma Box - O Sistema da Industria</h2>
-    <p class="section-sub">A Prisma Box e uma <strong>empresa de tecnologia</strong>, fundada em 2015 em Joinville-SC (CNPJ: 24.192.041/0001-95). Desenvolve software exclusivo para gestao de self storage - nao e operadora de espacos, e o sistema que os operadores usam.</p>
+    <h2 class="section-title">Prisma Box &mdash; O Sistema da Industria</h2>
+    <p class="section-sub">A Prisma Box e uma <strong>empresa de tecnologia</strong>, fundada em 2015 em Joinville-SC (CNPJ: 24.192.041/0001-95). Desenvolve software exclusivo para gestao de self storage &mdash; nao e operadora de espacos, e o sistema que os operadores usam.</p>
+
     <div class="grid-4" style="margin-bottom:28px;">
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:32px;font-weight:800;color:var(--blue);">2015</div><div style="font-size:13px;color:var(--text2);">fundacao do sistema</div><div style="font-size:11px;color:var(--text3);">Joinville-SC</div></div>
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:32px;font-weight:800;color:var(--green);">322</div><div style="font-size:13px;color:var(--text2);">unidades usando o sistema</div><div style="font-size:11px;color:var(--text3);">em 2026</div></div>
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--amber);"><div style="font-size:32px;font-weight:800;color:var(--amber);">56</div><div style="font-size:13px;color:var(--text2);">apresentacoes Jan-Maio 2026</div><div style="font-size:11px;color:var(--text3);">60%+ sao novos empreendedores</div></div>
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--purple);"><div style="font-size:32px;font-weight:800;color:var(--purple);">80.411</div><div style="font-size:13px;color:var(--text2);">boxes gerenciados</div><div style="font-size:11px;color:var(--text3);">524.953 m2 de ABL</div></div>
     </div>
+
     <div class="grid-2" style="margin-bottom:28px;">
-      <div class="chart-wrap"><div class="chart-title">Evolucao Historica - Unidades usando Prisma Box</div><div class="chart-sub">Crescimento 2016-2026</div><div class="chart-container"><canvas id="prismaEvolutionChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Evolucao Historica &mdash; Unidades usando Prisma Box</div><div class="chart-sub">Crescimento 2016-2026</div><div class="chart-container"><canvas id="prismaEvolutionChart"></canvas></div></div>
       <div class="card">
         <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">O Que o Sistema Faz</h3>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="padding:10px;background:#eff6ff;border-radius:8px;font-size:13px;"><strong>Cobranca Automatica</strong> - boleto, PIX e cartao integrados com baixa automatica</div>
-          <div style="padding:10px;background:#f0fdf4;border-radius:8px;font-size:13px;"><strong>Controle de Acesso</strong> - gestao autonoma de fechaduras e entradas</div>
-          <div style="padding:10px;background:#faf5ff;border-radius:8px;font-size:13px;"><strong>Assinatura Digital</strong> - contratos 100% digitais, sem papel</div>
-          <div style="padding:10px;background:#fffbeb;border-radius:8px;font-size:13px;"><strong>Multi-unidade</strong> - gerencia todas as unidades com login unico</div>
-          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Dashboard de Desempenho</strong> - ocupacao, ticket, inadimplencia em tempo real</div>
+          <div style="padding:10px;background:#eff6ff;border-radius:8px;font-size:13px;"><strong>Cobranca Automatica</strong> &mdash; boleto, PIX e cartao integrados com baixa automatica</div>
+          <div style="padding:10px;background:#f0fdf4;border-radius:8px;font-size:13px;"><strong>Controle de Acesso</strong> &mdash; gestao autonoma de fechaduras e entradas</div>
+          <div style="padding:10px;background:#faf5ff;border-radius:8px;font-size:13px;"><strong>Assinatura Digital</strong> &mdash; contratos 100% digitais, sem papel</div>
+          <div style="padding:10px;background:#fffbeb;border-radius:8px;font-size:13px;"><strong>Multi-unidade</strong> &mdash; gerencia todas as unidades com login unico</div>
+          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Dashboard de Desempenho</strong> &mdash; ocupacao, ticket, inadimplencia em tempo real</div>
         </div>
         <div style="margin-top:16px;padding:14px;background:#0f2847;border-radius:10px;color:#fff;">
           <div style="font-size:12px;opacity:.8;margin-bottom:4px;">Caso real apresentado no Conecta 2026</div>
           <div style="font-size:14px;font-weight:700;">&#127975; "Um Showroom que Virou Negocio"</div>
-          <div style="font-size:12px;opacity:.85;margin-top:4px;">Operacao real com 7 unidades de self storage no Brasil - da ideia ao faturamento. Por Bruno Guerriero.</div>
+          <div style="font-size:12px;opacity:.85;margin-top:4px;">Operacao real com 7 unidades de self storage no Brasil &mdash; da ideia ao faturamento. Desafios, estrategias e quanto fatura uma operacao atualmente. Por Bruno Guerriero.</div>
         </div>
       </div>
     </div>
+
     <div class="grid-2">
-      <div class="chart-wrap"><div class="chart-title">Distribuicao Regional - Unidades no Sistema</div><div class="chart-sub">Total: 322 unidades</div><div class="chart-container"><canvas id="regionDistChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Distribuicao Regional  &mdash; Unidades no Sistema</div><div class="chart-sub">Total: 322 unidades</div><div class="chart-container"><canvas id="regionDistChart"></canvas></div></div>
       <div class="chart-wrap"><div class="chart-title">Percepcao de Metragem pelo Cliente</div><div class="chart-sub">O que o cliente acha que precisa vs. o que aluga</div><div class="chart-container"><canvas id="perceptionChart"></canvas></div></div>
     </div>
   </div>
 </section>
+
+<!-- REGIOES -->
 <section id="regioes" class="bg-alt">
   <div class="container">
     <div class="section-tag">Dados Regionais</div>
     <h2 class="section-title">Panorama por Regiao</h2>
-    <p class="section-sub">Desempenho comparado das 5 regioes brasileiras - dados do sistema Prisma Box 2026.</p>
+    <p class="section-sub">Desempenho comparado das 5 regioes brasileiras &mdash; dados do sistema Prisma Box 2026.</p>
     <div style="overflow-x:auto;margin-bottom:28px;">
       <table class="data-table">
         <thead><tr><th>Regiao</th><th>Unidades</th><th>Boxes</th><th>ABL (m2)</th><th>Box Medio</th><th>Ocupacao</th><th>Ticket Medio</th><th>Status</th></tr></thead>
         <tbody>
           <tr><td><strong>Sudeste</strong></td><td>189</td><td>51.462</td><td>335.000</td><td>6,5 m2</td><td><span class="badge badge-green">77,8%</span></td><td><strong>R$ 534</strong></td><td><span class="badge badge-green">Acima da media</span></td></tr>
-          <tr><td><strong>Sul</strong></td><td>65</td><td>14.875</td><td>94.000</td><td>6,3 m2</td><td><span class="badge badge-green">76,2%</span></td><td><strong>R$ 482</strong></td><td><span class="badge badge-green">Acima da media</span></td></tr>
+          <tr><td><strong>Sul</strong></td><td>65</td><td>14.875</td><td>94.000</td><td>6,5 m2</td><td><span class="badge badge-green">76,2%</span></td><td><strong>R$ 482</strong></td><td><span class="badge badge-green">Acima da media</span></td></tr>
           <tr><td><strong>Nordeste</strong></td><td>42</td><td>9.323</td><td>62.000</td><td>6,6 m2</td><td><span class="badge badge-amber">69,4%</span></td><td><strong>R$ 421</strong></td><td><span class="badge badge-blue">Em expansao</span></td></tr>
           <tr><td><strong>Centro-Oeste</strong></td><td>18</td><td>3.524</td><td>23.000</td><td>6,5 m2</td><td><span class="badge badge-amber">72,1%</span></td><td><strong>R$ 456</strong></td><td><span class="badge badge-blue">Em expansao</span></td></tr>
           <tr><td><strong>Norte</strong></td><td>8</td><td>1.227</td><td>11.000</td><td>9,0 m2</td><td><span class="badge badge-red">63,2%</span></td><td><strong>R$ 388</strong></td><td><span class="badge badge-amber">Alta oportunidade</span></td></tr>
-          <tr style="background:#f8fafc;font-weight:700;"><td><strong>TOTAL</strong></td><td><strong>322</strong></td><td><strong>80.411</strong></td><td><strong>524.953</strong></td><td><strong>6,09 m2</strong></td><td><span class="badge badge-green"><strong>74,71%</strong></span></td><td><strong>R$ 491,38</strong></td><td>-</td></tr>
+          <tr style="background:#f8fafc;font-weight:700;"><td><strong>TOTAL</strong></td><td><strong>322</strong></td><td><strong>80.411</strong></td><td><strong>524.953</strong></td><td><strong>6,09 m2</strong></td><td><span class="badge badge-green"><strong>74,71%</strong></span></td><td><strong>R$ 491,38</strong></td><td>&mdash;</td></tr>
         </tbody>
       </table>
     </div>
     <div class="grid-2">
-      <div class="chart-wrap"><div class="chart-title">Ocupacao por Regiao (%)</div><div class="chart-sub">Media nacional 74,71% - Referencia EUA 77%</div><div class="chart-container"><canvas id="occupancyChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Ocupacao por Regiao (%)</div><div class="chart-sub">Media nacional 74,71% &middot; Referencia EUA 77%</div><div class="chart-container"><canvas id="occupancyChart"></canvas></div></div>
       <div class="chart-wrap"><div class="chart-title">Ticket Medio por Regiao (R$)</div><div class="chart-sub">Variacao de R$388 (Norte) a R$534 (Sudeste)</div><div class="chart-container"><canvas id="ticketChart"></canvas></div></div>
     </div>
   </div>
 </section>
+
+<!-- COMPARATIVO 2025 vs 2026 -->
 <section id="comparativo">
   <div class="container">
     <div class="section-tag">Analise Evolutiva</div>
@@ -255,58 +286,294 @@ footer strong{color:#fff}
     <div class="chart-wrap"><div class="chart-title">Variacao dos Principais Indicadores 2025 para 2026 (%)</div><div class="chart-sub">Crescimento percentual contra Conecta 2025</div><div class="chart-container" style="height:280px;"><canvas id="compareChart"></canvas></div></div>
   </div>
 </section>
+
+<!-- MEIOS DE PAGAMENTO -->
 <section id="pagamentos" class="bg-alt">
   <div class="container">
     <div class="section-tag">Cobranca &amp; Recebimento</div>
     <h2 class="section-title">Meios de Pagamento 2026</h2>
     <p class="section-sub">O setor esta em transicao acelerada do boleto para o PIX. Quem dominar o meio de pagamento domina o fluxo de caixa.</p>
     <div class="grid-3" style="margin-bottom:28px;">
-      <div class="card" style="text-align:center;border-top:3px solid var(--red);"><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Boleto - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">50,26%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--red);margin-top:6px;">53,36% do valor recebido</div></div>
-      <div class="card" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">PIX - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">38,54%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--green);margin-top:6px;">34,59% do valor recebido</div></div>
-      <div class="card" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:8px;">Cartao - Jan a Abr 2026</div><div style="font-size:42px;font-weight:800;color:var(--navy);">6,60%</div><div style="font-size:13px;color:var(--text2);">das quantidades</div><div style="font-size:15px;font-weight:700;color:var(--blue);margin-top:6px;">5,44% do valor recebido</div></div>
+      <div class="card" style="text-align:center;border-top:3px solid var(--red);">
+        <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Boleto &mdash; Jan a Abr 2026</div>
+        <div style="font-size:42px;font-weight:800;color:var(--navy);">50,26%</div>
+        <div style="font-size:13px;color:var(--text2);">das quantidades</div>
+        <div style="font-size:15px;font-weight:700;color:var(--red);margin-top:6px;">53,36% do valor recebido</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:4px;">Dominou o passado &mdash; em queda</div>
+      </div>
+      <div class="card" style="text-align:center;border-top:3px solid var(--green);">
+        <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">PIX &mdash; Jan a Abr 2026</div>
+        <div style="font-size:42px;font-weight:800;color:var(--navy);">38,54%</div>
+        <div style="font-size:13px;color:var(--text2);">das quantidades</div>
+        <div style="font-size:15px;font-weight:700;color:var(--green);margin-top:6px;">34,59% do valor recebido</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:4px;">2o lugar &mdash; crescimento acelerado</div>
+      </div>
+      <div class="card" style="text-align:center;border-top:3px solid var(--blue);">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:8px;">Cartao &mdash; Jan a Abr 2026</div>
+        <div style="font-size:42px;font-weight:800;color:var(--navy);">6,60%</div>
+        <div style="font-size:13px;color:var(--text2);">das quantidades</div>
+        <div style="font-size:15px;font-weight:700;color:var(--blue);margin-top:6px;">5,44% do valor recebido</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:4px;">Participacao estavel</div>
+      </div>
     </div>
     <div class="grid-2" style="margin-bottom:28px;">
-      <div class="chart-wrap"><div class="chart-title">Participacao por Meio de Pagamento (2026)</div><div class="chart-sub">% das quantidades - Jan-Abr 2026</div><div class="chart-container"><canvas id="paymentChart2026"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Participacao por Meio de Pagamento (2026)</div><div class="chart-sub">% das quantidades &middot; Jan-Abr 2026</div><div class="chart-container"><canvas id="paymentChart2026"></canvas></div></div>
       <div class="chart-wrap"><div class="chart-title">Evolucao dos Meios de Pagamento (2020-2026)</div><div class="chart-sub">Migracao do Boleto para o PIX</div><div class="chart-container"><canvas id="paymentEvolutionChart"></canvas></div></div>
     </div>
     <div class="card" style="background:linear-gradient(135deg,#0f2847,#059669);color:#fff;border:none;">
       <div class="grid-2">
-        <div><h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Grande Transicao</h3><p style="font-size:14px;line-height:1.7;opacity:.95;">"<strong>O futuro nao e escolher como cobrar. E nao precisar cobrar.</strong>"</p><div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.12);border-radius:10px;"><div style="font-size:13px;font-weight:700;margin-bottom:6px;">PIX Automatico - A proxima fronteira</div><div style="font-size:13px;opacity:.9;">Com PIX automatico: mais recebimento, menos inadimplencia.</div></div></div>
-        <div><h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Trajetoria</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2020:</span> Boleto ~80% - PIX ~0%</div><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2021-22:</span> PIX ganha espaco rapidamente</div><div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2026:</span> Boleto 50% / PIX 38% - convergencia iminente</div></div></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Grande Transicao</h3>
+          <p style="font-size:14px;line-height:1.7;oupacity:.95;">"<strong>O fUturo nao e escolher como cobrar. E nao precisar cobrar.</strong> O cliente migra para o meio mais facil."</p>
+          <div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.12);border-radius:10px;">
+            <div style="font-size:13px;font-weight:700;margin-bottom:6px;">PIX Automatico &mdash; A proxima fronteira</div>
+            <div style="font-size:13px;opacity:.9;">Sistemas de recorrencia tem menores indices de inadimplencia. Com PIX automatico: mais recebimento, menos inadimplencia.</div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">A Trajetoria</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2020:</span> Boleto ~80% &middot; PIX ~0%</div>
+            <div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2021-22:</span> Ponto de virada &mdash; PIX ganha espaco rapidamente</div>
+            <div style="padding:10px;background:rgba(255,255,255,0.12);border-radius:8px;font-size:13px;"><span style="font-weight:700;">2026:</span> Boleto 50% / PIX 38% &mdash; convergencia iminente</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- PRECO M2 vs INFLACAO -->
 <section id="preco-m2">
   <div class="container">
     <div class="section-tag">Valorizacao Real</div>
     <h2 class="section-title">Preco do m2 vs Inflacao</h2>
-    <p class="section-sub">O self storage no Brasil nao e so reposicao inflacionaria - e ganho de valor percebido. O preco do m2 superou o IPCA em +12 pontos percentuais.</p>
+    <p class="section-sub">O self storage no Brasil nao e so reposicao inflacionaria &mdash; e ganho de valor percebido. O preco do m2 superou o IPCA em +12 pontos percentuais.</p>
     <div class="grid-3" style="margin-bottom:28px;">
-      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:42px;font-weight:800;color:var(--blue);">+48%</div><div style="font-size:13px;color:var(--text2);">alta do preco do m2</div><div style="font-size:11px;color:var(--text3);">Jan/2020 - Abr/2026</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:42px;font-weight:800;color:var(--blue);">+48%</div><div style="font-size:13px;color:var(--text2);">alta do preco do m2</div><div style="font-size:11px;color:var(--text3);">Jan/2020 &ndash; Abr/2026</div></div>
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--red);"><div style="font-size:42px;font-weight:800;color:var(--red);">+36%</div><div style="font-size:13px;color:var(--text2);">inflacao acumulada (IPCA)</div><div style="font-size:11px;color:var(--text3);">mesmo periodo</div></div>
       <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:42px;font-weight:800;color:var(--green);">+12pp</div><div style="font-size:13px;color:var(--text2);">diferencial real</div><div style="font-size:11px;color:var(--text3);">acima da inflacao</div></div>
     </div>
-    <div class="chart-wrap" style="margin-bottom:28px;"><div class="chart-title">Preco do m2 vs IPCA (Base 100 = Jan/2020)</div><div class="chart-sub">Evolucao nacional - todas as operacoes Prisma Box - Jan/2020 a Abr/2026</div><div class="chart-container" style="height:300px;"><canvas id="priceVsInflationChart"></canvas></div></div>
+    <div class="chart-wrap" style="margin-bottom:28px;">
+      <div class="chart-title">Preco do m2 vs IPCA (Base 100 = Jan/2020)</div>
+      <div class="chart-sub">Evolucao nacional &mdash; todas as operacoes Prisma Box  &middot; Jan/2020 &ndash; Abr/2026</div>
+      <div class="chart-container" style="height:300px;"><canvas id="priceVsInflationChart"></canvas></div>
+    </div>
     <div class="grid-2">
-      <div class="card" style="border-left:4px solid var(--green);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Hedge contra Inflacao</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">O preco medio do m2 subiu <strong>+48%</strong> enquanto o IPCA acumulou <strong>+36%</strong>. Diferencial de <strong>+12pp</strong> acima da inflacao.</p></div>
-      <div class="card" style="border-left:4px solid var(--blue);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Insight Prisma Box</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">"O self storage no Brasil nao e so reposicao inflacionaria. <strong>E ganho de valor percebido.</strong>" - Analise Prisma Box</p></div>
+      <div class="card" style="border-left:4px solid var(--green);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Hedge contra Inflacao</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">O preco medio do m2 subiu <strong>+48%</strong> enquanto o IPCA acumulou <strong>+36%</strong>. O diferencial de <strong>+12pp</strong> comprova que o setor gera ganho de valor real &mdash; nao e reposicao, e valorizacao.</p></div>
+      <div class="card" style="border-left:4px solid var(--blue);"><h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;">Insight Prisma Box</h3><p style="font-size:14px;color:var(--text2);line-height:1.7;">"O self storage no Brasil nao e so reposicao inflacionaria. <strong>E ganho de valor percebido.</strong>" &mdash; Analise Prisma Box Jan/2020&ndash;Abr/2026</p></div>
     </div>
   </div>
 </section>
+
+<!-- TAMANHOS -->
+<section id="tamanhos" class="bg-alt">
+  <div class="container">
+    <div class="section-tag">Operacao &amp; Produto</div>
+    <h2 class="section-title">Tamanho de Boxes &mdash; O que os Dados Revelam</h2>
+    <p class="section-sub">10 anos de dados Prisma Box (2015&ndash;2025): a faixa 3&ndash;9m&sup2; concentra maior volume, melhor equilibrio de ocupacao e o maior potencial de yield.</p>
+    <div class="grid-4" style="margin-bottom:28px;">
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:32px;font-weight:800;color:var(--blue);">3&ndash;9m&sup2;</div><div style="font-size:13px;color:var(--text2);">Faixa ideal</div><div style="font-size:11px;color:var(--text3);">maior concentracao e yield</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:32px;font-weight:800;color:var(--green);">6,09m&sup2;</div><div style="font-size:13px;color:var(--text2);">Box medio Prisma Box</div><div style="font-size:11px;color:var(--text3);">524.953m&sup2; ABL total</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--amber);"><div style="font-size:32px;font-weight:800;color:var(--amber);">80.411</div><div style="font-size:13px;color:var(--text2);">boxes analisados</div><div style="font-size:11px;color:var(--text3);">2015&ndash;2025</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--purple);"><div style="font-size:32px;font-weight:800;color:var(--purple);">&ge;1,80m</div><div style="font-size:13px;color:var(--text2);">Padrao dominante</div><div style="font-size:11px;color:var(--text3);">altura que define o mercado</div></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="chart-wrap">
+        <div class="chart-title">Ocupacao Real por Tamanho e Altura (%)</div>
+        <div class="chart-sub">Padrao (&ge;1,80m) vs Baixo (&lt;1,80m) &middot; Dados Prisma Box 2015&ndash;2025</div>
+        <div class="chart-container" style="height:280px;"><canvas id="sizeOccupancyChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Mix Recomendado pelo Sistema</h3>
+        <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">Distribuicao ideal para maximizar ocupacao e receita por m&sup2;.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="padding:12px 14px;background:#eff6ff;border-radius:10px;border-left:4px solid var(--blue);display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;font-weight:600;color:var(--navy);">1&ndash;3m&sup2;</span><span style="font-size:14px;font-weight:800;color:var(--blue);">30&ndash;35%</span></div>
+          <div style="padding:12px 14px;background:#f0fdf4;border-radius:10px;border-left:4px solid var(--green);display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;font-weight:600;color:var(--navy);">3&ndash;6m&sup2;</span><span style="font-size:14px;font-weight:800;color:var(--green);">30&ndash;35%</span></div>
+          <div style="padding:12px 14px;background:#fffbeb;border-radius:10px;border-left:4px solid var(--amber);display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;font-weight:600;color:var(--navy);">6&ndash;9m&sup2;</span><span style="font-size:14px;font-weight:800;color:var(--amber);">15&ndash;20%</span></div>
+          <div style="padding:12px 14px;background:#f0f9ff;border-radius:10px;border-left:4px solid var(--sky);display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;font-weight:600;color:var(--navy);">9&ndash;15m&sup2;</span><span style="font-size:14px;font-weight:800;color:var(--sky);">8&ndash;12%</span></div>
+          <div style="padding:12px 14px;background:#faf5ff;border-radius:10px;border-left:4px solid var(--purple);display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;font-weight:600;color:var(--navy);">15m&sup2;+</span><span style="font-size:14px;font-weight:800;color:var(--purple);">3&ndash;6%</span></div>
+        </div>
+        <div style="margin-top:14px;padding:12px;background:var(--navy);border-radius:10px;color:#fff;font-size:13px;line-height:1.5;">
+          <strong>Insight:</strong> 1&ndash;3m&sup2; tem o maior yield/m&sup2; em localizacoes urbanas densas. &gt;25m&sup2; padrao tem apenas 21,8% de ocupacao &mdash; cuidado com excesso.
+        </div>
+      </div>
+    </div>
+    <div class="card" style="overflow-x:auto;">
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Detalhamento Faixa 1&ndash;3m&sup2; (Prisma Box 2015&ndash;2025)</h3>
+      <table class="data-table">
+        <thead><tr><th>Tipo</th><th>% do total</th><th>Qtd Boxes</th><th>Ticket Medio</th><th>Preco/m&sup2;</th><th>Perfil</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Virtual / Endereco Fiscal</strong></td><td>2,7%</td><td>618 boxes</td><td>R$ 383,73</td><td>R$ 297,61/m&sup2;</td><td><span class="badge badge-purple">Maior yield</span></td></tr>
+          <tr><td><strong>Locker Provavel</strong></td><td>13,4%</td><td>4.292 boxes</td><td>R$ 125,48</td><td>R$ 94,58/m&sup2;</td><td><span class="badge badge-blue">Volume</span></td></tr>
+          <tr><td><strong>Box Fisico Padrao</strong></td><td>59,0%</td><td>13.483 boxes</td><td>R$ 274,11</td><td>R$ 120,31/m&sup2;</td><td><span class="badge badge-green">Core do negocio</span></td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:12px;padding:12px;background:#fef3c7;border-radius:8px;font-size:12px;color:#92400e;"><strong>Nota:</strong> Endereco fiscal tem o maior ticket mas representa apenas 2,7% dos contratos. Box Fisico Padrao e o dominante com 59% &mdash; o core da operacao na faixa 1&ndash;3m&sup2;.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZACAO -->
+<section id="localizacao">
+  <div class="container">
+    <div class="section-tag">Estrategia de Localizacao</div>
+    <h2 class="section-title">Localizacao Define o Mix Ideal</h2>
+    <p class="section-sub">O mix de boxes deve ser orientado pelo perfil de localizacao. Cada tipo de regiao tem um cliente e tamanho ideal &mdash; com raio de decisao de 3 a 8 km.</p>
+    <div class="card" style="background:linear-gradient(135deg,#0f2847,#1d4ed8);color:#fff;border:none;margin-bottom:28px;text-align:center;padding:28px;">
+      <div style="font-size:22px;font-weight:800;margin-bottom:8px;">"A influencia nao e um circulo &mdash; e uma <span style="color:#86efac;">ELIPSE</span>"</div>
+      <div style="font-size:14px;opacity:.9;">A captacao de clientes e direcional, nao simetrica. Raio de decisao: <strong>3 a 8 km</strong></div>
+    </div>
+    <div class="grid-4" style="margin-bottom:28px;">
+      <div class="loc-type" style="border-color:#bfdbfe;background:#eff6ff;">
+        <div style="font-size:20px;font-weight:800;color:var(--blue);margin-bottom:4px;">Tipo A</div>
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;">Alta Densidade Urbana</div>
+        <div style="font-size:12px;color:var(--text3);margin-bottom:10px;">Centro / Bairros adensados</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;"><strong>Box:</strong> 1&ndash;3m&sup2;<br><strong>Diferencial:</strong> Maior yield/m&sup2;<br><strong>Cliente:</strong> Moradores, PF</div>
+      </div>
+      <div class="loc-type" style="border-color:#bbf7d0;background:#f0fdf4;">
+        <div style="font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px;">Tipo B</div>
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;">Zona Intermediaria</div>
+        <div style="font-size:12px;color:var(--text3);margin-bottom:10px;">Bairros residenciais / comerciais</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;"><strong>Box:</strong> 3&ndash;6m&sup2;<br><strong>Diferencial:</strong> Equilibrio ocupacao/preco<br><strong>Cliente:</strong> Mix PF e PME</div>
+      </div>
+      <div class="loc-type" style="border-color:#fde68a;background:#fffbeb;">
+        <div style="font-size:20px;font-weight:800;color:var(--amber);margin-bottom:4px;">Tipo C</div>
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;">Periferia / Marginal</div>
+        <div style="font-size:12px;color:var(--text3);margin-bottom:10px;">Regioes perifericas / marginais</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;"><strong>Box:</strong> 6&ndash;9m&sup2;+<br><strong>Diferencial:</strong> Custo menor, volume<br><strong>Cliente:</strong> Familias e PME</div>
+      </div>
+      <div class="loc-type" style="border-color:#ddd6fe;background:#faf5ff;">
+        <div style="font-size:20px;font-weight:800;color:var(--purple);margin-bottom:4px;">Tipo D</div>
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;">Logistico / Industrial</div>
+        <div style="font-size:12px;color:var(--text3);margin-bottom:10px;">Rodovias / Zonas industriais</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;"><strong>Box:</strong> 9m&sup2;+<br><strong>Diferencial:</strong> Hub last mile / estoque<br><strong>Cliente:</strong> PJ / Logistica</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Coeficiente de Precificacao por Aluguel Residencial</h3>
+        <p style="font-size:12px;color:var(--text2);margin-bottom:16px;font-style:italic;">Formula: Preco SS = Aluguel Residencial Medio da Regiao &times; Coeficiente</p>
+        <div class="coef-row"><span class="coef-label">R$80&ndash;120/m&sup2; residencial</span><div class="coef-track"><div class="coef-fill" style="width:72%;background:var(--blue);"></div></div><span class="coef-val">2,5&ndash;3,5x</span></div>
+        <div class="coef-row"><span class="coef-label">R$60&ndash;90/m&sup2; residencial</span><div class="coef-track"><div class="coef-fill" style="width:52%;background:var(--green);"></div></div><span class="coef-val">1,8&ndash;2,3x</span></div>
+        <div class="coef-row"><span class="coef-label">R$50&ndash;70/m&sup2; residencial</span><div class="coef-track"><div class="coef-fill" style="width:44%;background:var(--sky);"></div></div><span class="coef-val">1,6&ndash;2,1x</span></div>
+        <div class="coef-row"><span class="coef-label">R$40&ndash;60/m&sup2; residencial</span><div class="coef-track"><div class="coef-fill" style="width:55%;background:var(--amber);"></div></div><span class="coef-val">2,0&ndash;2,5x</span></div>
+        <div class="coef-row"><span class="coef-label">R$30&ndash;50/m&sup2; residencial</span><div class="coef-track"><div class="coef-fill" style="width:50%;background:var(--purple);"></div></div><span class="coef-val">1,8&ndash;2,3x</span></div>
+        <div style="margin-top:16px;padding:12px;background:#f8fafc;border-radius:8px;font-size:12px;color:var(--text2);border:1px solid var(--border);">&#9888;&#65039; <strong>Precificacao Dinamica Inteligente</strong> em desenvolvimento pela Prisma Box &mdash; ajuste automatico por ocupacao, sazonalidade e demanda.</div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">O Preco Nasce no Mercado</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="padding:14px;background:#eff6ff;border-radius:10px;border-left:4px solid var(--blue);">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;">1. Pesquise a concorrencia</div>
+            <div style="font-size:12px;color:var(--text2);">Identifique o preco de mercado local antes de definir o seu</div>
+          </div>
+          <div style="padding:14px;background:#f0fdf4;border-radius:10px;border-left:4px solid var(--green);">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;">2. Aplique o coeficiente</div>
+            <div style="font-size:12px;color:var(--text2);">Use o aluguel residencial da regiao como base de calculo</div>
+          </div>
+          <div style="padding:14px;background:#fffbeb;border-radius:10px;border-left:4px solid var(--amber);">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;">3. Ajuste por Tamanho</div>
+            <div style="font-size:12px;color:var(--text2);">Boxes menores = maior preco/m&sup2; (proporcional ao mercado)</div>
+          </div>
+          <div style="padding:14px;background:#faf5ff;border-radius:10px;border-left:4px solid var(--purple);">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;">4. Otimize por Ocupacao</div>
+            <div style="font-size:12px;color:var(--text2);">Acima de 85%: reajustar. Abaixo de 60%: promover e revisar preco</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING -->
+<section id="marketing" class="bg-alt">
+  <div class="container">
+    <div class="section-tag">Cliente &amp; Conversao</div>
+    <h2 class="section-title">Perfil do Cliente e Estrategia de Marketing</h2>
+    <p class="section-sub">89,7% das motivacoes de compra sao mudanca, falta de espaco ou estoque. A decisao acontece em ~7 dias com 2 a 3 interacoes. Promocao e capturar intencao &mdash; nao branding.</p>
+    <div class="grid-4" style="margin-bottom:28px;">
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:32px;font-weight:800;color:var(--blue);">89,7%</div><div style="font-size:13px;color:var(--text2);">das motivacoes</div><div style="font-size:11px;color:var(--text3);">mudanca + espaco + estoque</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:32px;font-weight:800;color:var(--green);">~7 dias</div><div style="font-size:13px;color:var(--text2);">janela de decisao</div><div style="font-size:11px;color:var(--text3);">2 a 3 interacoes</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--amber);"><div style="font-size:32px;font-weight:800;color:var(--amber);">2,63x</div><div style="font-size:13px;color:var(--text2);">visualizacoes da proposta</div><div style="font-size:11px;color:var(--text3);">SmartProposta</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--purple);"><div style="font-size:32px;font-weight:800;color:var(--purple);">7,21d</div><div style="font-size:13px;color:var(--text2);">fechamento SmartProposta</div><div style="font-size:11px;color:var(--text3);">ate precisar do espaco: 8,94d</div></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="chart-wrap"><div class="chart-title">Por que o cliente busca Self Storage?</div><div class="chart-sub">Motivacoes de entrada &middot; Dados Prisma Box 2026</div><div class="chart-container"><canvas id="clientNeedsChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Tempo de Permanencia por Plano (meses)</div><div class="chart-sub">Duracao media do contrato por Tipo de Plano &middot; Prisma Box 2026</div><div class="chart-container"><canvas id="permanenceChart"></canvas></div></div>
+    </div>
+    <div class="card" style="border-left:4px solid var(--sky);margin-bottom:24px;">
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">SmartProposta &mdash; Dados de Comportamento do Cliente</h3>
+      <div class="grid-3" style="margin-bottom:14px;">
+        <div style="padding:14px;background:#f0f9ff;border-radius:10px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--sky);">7,21d</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:4px;">tempo medio de fechamento</div>
+        </div>
+        <div style="padding:14px;background:#f0fdf4;border-radius:10px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--green);">2,63x</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:4px;">visualizacoes antes de fechar</div>
+        </div>
+        <div style="padding:14px;background:#fffbeb;border-radius:10px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--amber);">8,94d</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:4px;">ate precisar efetivamente do espaco</div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:var(--text2);">O cliente decide com antecedencia &mdash; o desafio e estar presente nesse momento e <strong>nao perder a janela de ~7 dias</strong>.</div>
+    </div>
+    <div class="card" style="background:linear-gradient(135deg,#1d4ed8,#0ea5e9);color:#fff;border:none;">
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;">A Promocao Precisa Fazer 3 Coisas</h3>
+      <p style="font-size:13px;opacity:.9;margin-bottom:20px;">"Mais tecnologia nao e complexidade &mdash; e simplicidade escalavel." Promocao nao e branding: e capturar intencao + acelerar decisao.</p>
+      <div class="grid-3">
+        <div style="padding:16px;background:rgba(255,255,255,0.15);border-radius:12px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#128269;</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:6px;">1. Ser Encontrado</div>
+          <div style="font-size:12px;opacity:.9;">Google Maps, Search, SEO local. O cliente precisa te achar no momento da intencao de compra.</div>
+        </div>
+        <div style="padding:16px;background:rgba(255,255,255,0.15);border-radius:12px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#9889;</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:6px;">2. Reduzir Friccao</div>
+          <div style="font-size:12px;opacity:.9;">SmartProposta online, resposta rapida, contato imediato. Menos atrito = mais conversao.</div>
+        </div>
+        <div style="padding:16px;background:rgba(255,255,255,0.15);border-radius:12px;text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">&#9201;</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:6px;">3. Ativar no Tempo Certo</div>
+          <div style="font-size:12px;opacity:.9;">A janela e de ~7 dias. Ativar no momento de decisao, nao antes nem depois.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IA -->
 <section id="ia" class="bg-alt">
   <div class="container">
     <div class="section-tag">Tecnologia &amp; Inovacao</div>
     <h2 class="section-title">Inteligencia Artificial no Self Storage</h2>
-    <p class="section-sub">O Conecta 2026 dedicou sessoes a IA. "A IA precisa de combustivel: dados."</p>
+    <p class="section-sub">O Conecta 2026 dedicou sessoes a IA &mdash; de precificacao dinamica a combate a inadimplencia. "A IA precisa de combustivel: dados."</p>
     <div class="grid-3" style="margin-bottom:28px;">
-      <div class="card" style="border-top:3px solid var(--blue);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Precificacao Dinamica</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA analisa demanda, sazonalidade e concorrencia em tempo real.</p></div>
-      <div class="card" style="border-top:3px solid var(--red);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Combate a Inadimplencia</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">Modelos preditivos identificam risco antes do atraso.</p></div>
-      <div class="card" style="border-top:3px solid var(--green);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Chatbots &amp; Atendimento</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA no WhatsApp para leads, agendamentos e renovacoes.</p></div>
+      <div class="card" style="border-top:3px solid var(--blue);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Precificacao Dinamica</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA analisa demanda, sazonalidade e concorrencia em tempo real. Migracao de modelo reativo para preditivo.</p></div>
+      <div class="card" style="border-top:3px solid var(--red);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Combate a Inadimplencia</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">Modelos preditivos identificam risco antes do atraso. Regua inteligente de cobranca automatizada.</p></div>
+      <div class="card" style="border-top:3px solid var(--green);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;">Chatbots &amp; Atendimento</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">IA no WhatsApp para leads, agendamentos e renovacoes. Reducao do CAC e aumento da conversao.</p></div>
     </div>
-    <div class="chart-wrap"><div class="chart-title">Plataformas de IA - Comparativo</div><div class="chart-sub">Ferramentas apresentadas no Conecta 2026</div><div style="overflow-x:auto;margin-top:16px;"><table class="ai-table"><thead><tr><th>Plataforma</th><th>Melhor Para</th><th>Pontos Fortes</th><th>Limitacoes</th><th>Recom.</th></tr></thead><tbody><tr><td><strong>ChatGPT (OpenAI)</strong></td><td>Atendimento, copywriting</td><td>Maior ecossistema de integracoes</td><td>Custo elevado nos planos avancados</td><td><span class="badge badge-green">Alta</span></td></tr><tr><td><strong>Claude (Anthropic)</strong></td><td>Analise de contratos, docs longos</td><td>Contexto longo; raciocinio superior</td><td>Menos plugins vs. ChatGPT</td><td><span class="badge badge-green">Alta</span></td></tr><tr><td><strong>Gemini (Google)</strong></td><td>Integracao Google Workspace</td><td>Nativo em Gmail, Docs, Sheets</td><td>Qualidade inferior em tarefas complexas</td><td><span class="badge badge-blue">Media</span></td></tr><tr><td><strong>Llama 3 (Meta)</strong></td><td>Uso interno / on-premise</td><td>Open source; dados na empresa</td><td>Exige infraestrutura tecnica</td><td><span class="badge badge-amber">Tecnica</span></td></tr></tbody></table></div></div>
+    <div class="chart-wrap">
+      <div class="chart-title">Plataformas de IA &mdash; Comparativo</div>
+      <div class="chart-sub">Ferramentas apresentadas no Conecta 2026</div>
+      <div style="overflow-x:auto;margin-top:16px;">
+        <table class="ai-table">
+          <thead><tr><th>Plataforma</th><th>Melhor Para</th><th>Pontos Fortes</th><th>Limitacoes</th><th>Recom.</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ChatGPT (OpenAI)</strong></td><td>Atendimento, copywriting</td><td>Maior ccossistema de integracoes</td><td>Custo elevado nos planos avancados</td><td><span class="badge badge-green">Alta</span></td></tr>
+            <tr><td><strong>Claude (Anthropic)</strong></td><td>Analise de contratos, docs longos</td><td>Contexto longo; raciocinio superior</td><td>Menos plugins vs. ChatGPT</td><td><span class="badge badge-green">Alta</span></td></tr>
+            <tr><td><strong>Gemini (Google)</strong></td><td>Integracao Google Workspace</td><td>Nativo em Gmail, Docs, Sheets</td><td>Qualidade inferior em tarefas complexas</td><td><span class="badge badge-blue">Media</span></td></tr>
+            <tr><td><strong>Llama 3 (Meta)</strong></td><td>Uso interno / on-premise</td><td>Open source; dados nao saem da empresa</td><td>Exige infraestrutura tecnica</td><td><span class="badge badge-amber">Tecnica</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- SEGUROS -->
 <section id="seguros">
   <div class="container">
     <div class="section-tag">Protecao &amp; Cobertura</div>
@@ -326,96 +593,245 @@ footer strong{color:#fff}
         <div class="seg-region-bar"><span class="seg-region-name">Nordeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:62.92%;background:var(--sky);"></div></div><span class="seg-region-pct" style="color:var(--sky);">62,92%</span></div>
         <div class="seg-region-bar"><span class="seg-region-name">Sul</span><div class="seg-region-track"><div class="seg-region-fill" style="width:60.84%;background:var(--purple);"></div></div><span class="seg-region-pct" style="color:var(--purple);">60,84%</span></div>
         <div class="seg-region-bar"><span class="seg-region-name">Centro-Oeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:52.93%;background:var(--amber);"></div></div><span class="seg-region-pct" style="color:var(--amber);">52,93%</span></div>
-        <div style="margin-top:16px;padding:10px;background:#fef3c7;border-radius:8px;font-size:12px;color:#92400e;"><strong>Oportunidade:</strong> Centro-Oeste e Sul tem a maior lacuna.</div>
+        <div style="margin-top:16px;padding:10px;background:#fef3c7;border-radius:8px;font-size:12px;color:#92400e;"><strong>Oportunidade:</strong> Centro-Oeste e Sul tem a maior lacuna &mdash; espaco para aumentar adesao ao seguro.</div>
       </div>
       <div class="card">
         <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Sem vs Com Valor Declarado</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-          <div style="padding:16px;background:#fef2f2;border-radius:12px;text-align:center;border:2px dashed var(--red);"><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Sem declarar</div><div style="font-size:32px;font-weight:800;color:var(--red);">30-50%</div><div style="font-size:12px;color:var(--text2);">com seguro</div></div>
-          <div style="padding:16px;background:#f0fdf4;border-radius:12px;text-align:center;border:2px solid var(--green);"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Com declaracao</div><div style="font-size:32px;font-weight:800;color:var(--green);">70-85%</div><div style="font-size:12px;color:var(--text2);">com seguro</div></div>
+          <div style="padding:16px;background:#fef2f2;border-radius:12px;text-align:center;border:2px dashed var(--red);">
+            <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Sem declarar</div>
+            <div style="font-size:32px;font-weight:800;color:var(--red);">30&ndash;50%</div>
+            <div style="font-size:12px;color:var(--text2);">com seguro</div>
+          </div>
+          <div style="padding:16px;background:#f0fdf4;border-radius:12px;text-align:center;border:2px solid var(--green);">
+            <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Com declaracao</div>
+            <div style="font-size:32px;font-weight:800;color:var(--green);">70&ndash;85%</div>
+            <div style="font-size:12px;color:var(--text2);">com seguro</div>
+          </div>
         </div>
-        <div style="padding:12px;background:var(--navy);border-radius:10px;color:#fff;text-align:center;"><div style="font-size:13px;font-weight:700;">Declarar valor dobra a adesao ao seguro</div></div>
+        <div style="padding:12px;background:var(--navy);border-radius:10px;color:#fff;text-align:center;">
+          <div style="font-size:13px;font-weight:700;">Consciencia de valor &rarr; Protecao</div>
+          <div style="font-size:12px;opacity:.85;margin-top:4px;">Declarar valor <strong>dobra</strong> a adesao ao seguro</div>
+        </div>
       </div>
     </div>
     <div class="grid-2" style="margin-bottom:28px;">
-      <div class="chart-wrap"><div class="chart-title">Adesao ao Seguro - Evolucao 2020-2025</div><div class="chart-sub">Com vs Sem valor declarado</div><div class="chart-container"><canvas id="adherenceChart"></canvas></div></div>
-      <div class="chart-wrap"><div class="chart-title">Evolucao das Medias Gerais de Seguro (2020-2025)</div><div class="chart-sub">% com seguro e premio medio/m2</div><div class="chart-container"><canvas id="seguroEvolChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Adesao ao Seguro &mdash; Evolucao 2020&ndash;2025</div><div class="chart-sub">Com vs Sem valor declarado</div><div class="chart-container"><canvas id="adherenceChart"></canvas></div></div>
+      <div class="chart-wrap"><div class="chart-title">Evolucao das Medias Gerais de Seguro (2020&ndash;2025)</div><div class="chart-sub">% com seguro e premio medio/m2</div><div class="chart-container"><canvas id="seguroEvolChart"></canvas></div></div>
     </div>
     <div class="grid-2">
       <div class="chart-wrap"><div class="chart-title">Cobertura Minima Obrigatoria por Metragem (R$)</div><div class="chart-sub">Fast Track JR&amp;Marto + HDI</div><div class="chart-container"><canvas id="seguroChart"></canvas></div></div>
-      <div class="card" style="align-self:start;"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;">Coberturas vs. Exclusoes</h3><div style="margin-bottom:12px;"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Coberturas</div><div class="pill-grid"><span class="pill pill-green">Incendio &amp; explosao</span><span class="pill pill-green">Roubo e furto</span><span class="pill pill-green">Danos eletricos</span><span class="pill pill-green">Infiltracao subita</span></div></div><div><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Exclusoes</div><div class="pill-grid"><span class="pill pill-red">Itens ilegais</span><span class="pill pill-red">Umidade semiaberto</span><span class="pill pill-red">Desgaste natural</span></div></div><div style="margin-top:12px;padding:10px;background:#fffbeb;border-radius:8px;border:1px solid #fde68a;font-size:12px;color:#92400e;"><strong>Atencao:</strong> Sensor de fumaca e requisito para cobertura.</div></div>
+      <div class="card" style="align-self:start;">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;">Coberturas vs. Exclusoes</h3>
+        <div style="margin-bottom:12px;"><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">Coberturas</div><div class="pill-grid"><span class="pill pill-green">Incendio &amp; explosao</span><span class="pill pill-green">Roubo e furto</span><span class="pill pill-green">Danos eletricos</span><span class="pill pill-green">Infiltracao subita</span></div></div>
+        <div><div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Exclusoes</div><div class="pill-grid"><span class="pill pill-red">Itens ilegais</span><span class="pill pill-red">Umidade semiaberto</span><span class="pill pill-red">Desgaste natural</span></div></div>
+        <div style="margin-top:12px;padding:10px;background:#fffbeb;border-radius:8px;border:1px solid #fde68a;font-size:12px;color:#92400e;"><strong>Atencao:</strong> Sensor de fumaca e requisito para cobertura. Inclua clausula de multa por armazenamento ilegal.</div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- JURIDICO -->
 <section id="juridico" class="bg-alt">
   <div class="container">
     <div class="section-tag">Aspectos Juridicos</div>
     <h2 class="section-title">Contrato &amp; Tributario</h2>
-    <p class="section-sub">Pontos-chave para protecao juridica. Alerta: <strong>Reforma Tributaria - prazo 1/1/2027.</strong></p>
+    <p class="section-sub">Pontos-chave para protecao juridica e adequacao ao ambiente regulatorio. Alerta: <strong>Reforma Tributaria &mdash; prazo 1/1/2027.</strong></p>
     <div class="grid-2">
-      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Checklist do Contrato</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de reequilibrio financeiro</strong><br><span style="font-size:12px;color:var(--text2);">Obrigatoria antes de 1/1/2027</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de direito ao credito</strong><br><span style="font-size:12px;color:var(--text2);">Para fornecedores - repasse tributario</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Multa por armazenamento ilegal</strong><br><span style="font-size:12px;color:var(--text2);">Protecao juridica do operador</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Endereco fiscal (R$220/mes)</strong><br><span style="font-size:12px;color:var(--text2);">Receita recorrente extra</span></div></div><div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Todos os meios de contato</strong><br><span style="font-size:12px;color:var(--text2);">Telefone, e-mail, WhatsApp e redes sociais</span></div></div></div></div>
-      <div class="card" style="border-left:4px solid var(--amber);"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Reforma Tributaria - Alerta</h3><div style="background:#fffbeb;border-radius:10px;padding:14px;margin-bottom:14px;"><div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:4px;">Data Critica: 1/1/2027</div><p style="font-size:13px;color:#78350f;">Todos os contratos precisam ser revisados <strong>antes de 2027</strong>.</p></div><div style="display:flex;flex-direction:column;gap:8px;"><div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>IBS/CBS:</strong> impacto nos contratos de longo prazo</div><div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Split payment:</strong> impacto no fluxo de caixa</div></div></div>
+      <div class="card">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Checklist do Contrato</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de reequilibrio financeiro</strong><br><span style="font-size:12px;color:var(--text2);">Obrigatoria antes de 1/1/2027</span></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de direito ao credito</strong><br><span style="font-size:12px;color:var(--text2);">Para fornecedores &mdash; repasse tributario</span></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Clausula de rateio</strong><br><span style="font-size:12px;color:var(--text2);">Custos comuns e areas compartilhadas</span></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Multa por armazenamento ilegal</strong><br><span style="font-size:12px;color:var(--text2);">Protecao juridica do operador</span></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Endereco fiscal (R$220/mes)</strong><br><span style="font-size:12px;color:var(--text2);">Receita recorrente extra</span></div></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green);font-size:16px;flex-shrink:0;">&#10003;</span><div><strong style="font-size:13px;">Todos os meios de contato</strong><br><span style="font-size:12px;color:var(--text2);">Telefone, e-mail, WhatsApp e redes sociais</span></div></div>
+        </div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--amber);">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Reforma Tributaria &mdash; Alerta</h3>
+        <div style="background:#fffbeb;border-radius:10px;padding:14px;margin-bottom:14px;"><div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:4px;">Data Critica: 1/1/2027</div><p style="font-size:13px;color:#78350f;">Todos os contratos precisam ser revisados <strong>antes de 2027</strong>.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Codigos de atividade:</strong> verificar enquadramento correto</div>
+          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>IBS/CBS:</strong> impacto nos contratos de longo prazo</div>
+          <div style="padding:10px;background:#f8fafc;border-radius:8px;font-size:13px;"><strong>Split payment:</strong> impacto no fluxo de caixa</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- INADIMPLENCIA -->
 <section id="inadimplencia">
   <div class="container">
     <div class="section-tag">Gestao de Cobranca</div>
-    <h2 class="section-title">Inadimplencia no Self Storage</h2>
-    <p class="section-sub">70% dos inadimplentes pagam em ate 7 dias com o contato certo. PIX automatico reduz inadimplencia.</p>
+    <h2 class="section-title">Inadimplencia: Tempo e Dinheiro</h2>
+    <p class="section-sub">72,33% dos inadimplentes pagam nos primeiros 7 dias. O problema nao e a inadimplencia &mdash; e a demora para agir. O cliente age em 30 dias. O operador, em media, com 190 dias.</p>
     <div class="grid-4" style="margin-bottom:28px;">
-      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--green);">70%</div><div style="font-size:13px;color:var(--text2);">pagam em ate 7 dias</div></div>
-      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--blue);">11-13</div><div style="font-size:13px;color:var(--text2);">meses de permanencia</div></div>
-      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--amber);">48h</div><div style="font-size:13px;color:var(--text2);">1o contato ideal</div></div>
-      <div class="card-sm" style="text-align:center;"><div style="font-size:36px;font-weight:800;color:var(--red);">3x</div><div style="font-size:13px;color:var(--text2);">mais caro recuperar que reter</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--green);"><div style="font-size:36px;font-weight:800;color:var(--green);">72,33%</div><div style="font-size:13px;color:var(--text2);">recuperados em 01&ndash;07 dias</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--blue);"><div style="font-size:36px;font-weight:800;color:var(--blue);">~90%</div><div style="font-size:13px;color:var(--text2);">recuperados em ate 30 dias</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--amber);"><div style="font-size:36px;font-weight:800;color:var(--amber);">30d</div><div style="font-size:13px;color:var(--text2);">limite para recuperar</div><div style="font-size:11px;color:var(--text3);">apos isso, e gestao de prejuizo</div></div>
+      <div class="card-sm" style="text-align:center;border-top:3px solid var(--red);"><div style="font-size:36px;font-weight:800;color:var(--red);">190d</div><div style="font-size:13px;color:var(--text2);">tempo medio do operador agir</div><div style="font-size:11px;color:var(--text3);">GAP de +160 dias desperdicados</div></div>
     </div>
+
+    <div class="card" style="margin-bottom:28px;border-left:4px solid var(--amber);">
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;">&#9200; Tempo e Dinheiro &mdash; O GAP Critico</h3>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">O cliente 90% paga em &le;30 dias. O operador age, em media, com 190 dias. Resultado: <strong>160 dias de box ocupado sem receita &mdash; um Box Zumbi</strong>.</p>
+      <div style="display:flex;height:56px;border-radius:10px;overflow:hidden;margin-bottom:6px;">
+        <div style="flex:30;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;min-width:60px;">30 dias</div>
+        <div style="flex:160;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;">&#9888; GAP: +160 dias perdidos</div>
+      </div>
+      <div style="display:flex;font-size:11px;color:var(--text2);margin-bottom:16px;">
+        <div style="flex:30;text-align:center;min-width:60px;">Cliente paga</div>
+        <div style="flex:160;text-align:center;">Operador ainda nao agiu (media: 190d total)</div>
+      </div>
+      <div style="padding:14px;background:#fef2f2;border-radius:10px;border:1px solid #fecaca;text-align:center;">
+        <div style="font-size:15px;font-weight:800;color:var(--red);">"Depois de 30 dias, nao e mais cobranca. E GESTAO DE PREJUIZO."</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="chart-wrap">
+        <div class="chart-title">Curva de Recuperacao por Periodo</div>
+        <div class="chart-sub">% de inadimplentes recuperados em cada janela &middot; Prisma Box 2015&ndash;2025</div>
+        <div class="chart-container" style="height:280px;"><canvas id="recoveryChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">Recuperacao em 01&ndash;07 dias por Regiao</h3>
+        <div class="seg-region-bar"><span class="seg-region-name">Sul</span><div class="seg-region-track"><div class="seg-region-fill" style="width:74.33%;background:var(--blue);"></div></div><span class="seg-region-pct" style="color:var(--blue);">74,33%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Sudeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:72.92%;background:var(--green);"></div></div><span class="seg-region-pct" style="color:var(--green);">72,92%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Centro-Oeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:70.63%;background:var(--sky);"></div></div><span class="seg-region-pct" style="color:var(--sky);">70,63%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Nordeste</span><div class="seg-region-track"><div class="seg-region-fill" style="width:68.68%;background:var(--amber);"></div></div><span class="seg-region-pct" style="color:var(--amber);">68,68%</span></div>
+        <div class="seg-region-bar"><span class="seg-region-name">Norte</span><div class="seg-region-track"><div class="seg-region-fill" style="width:63.63%;background:var(--red);"></div></div><span class="seg-region-pct" style="color:var(--red);">63,63%</span></div>
+        <div style="margin-top:16px;padding:10px;background:#f0fdf4;border-radius:8px;font-size:12px;color:#15803d;"><strong>Sul e Sudeste</strong> lideram a recuperacao rapida. Norte tem maior lacuna &mdash; exige processo mais proativo e presencial.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:28px;">
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:16px;">&#128336; Prazos Recomendados de Acao</h3>
+      <div class="timeline-track">
+        <div class="timeline-phase" style="background:var(--green);"><div class="timeline-days">&le;30 dias</div><div class="timeline-label">Recuperacao Amigavel</div></div>
+        <div class="timeline-phase" style="background:var(--amber);"><div class="timeline-days">31&ndash;60 dias</div><div class="timeline-label">Alerta e Negociacao</div></div>
+        <div class="timeline-phase" style="background:var(--red);"><div class="timeline-days">61&ndash;90 dias</div><div class="timeline-label">Acao Extrajudicial</div></div>
+        <div class="timeline-phase" style="background:#374151;"><div class="timeline-days">90+ dias</div><div class="timeline-label">Medidas Cabiveis</div></div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px;">
+      <div class="zombie-box">
+        <div style="font-size:40px;margin-bottom:8px;">&#129503;</div>
+        <div style="font-size:22px;font-weight:800;color:#f87171;margin-bottom:10px;">Box Zumbi</div>
+        <div style="font-size:14px;opacity:.9;line-height:1.7;">Um box inadimplente ha mais de 30 dias nao e mais um cliente em atraso. E um <strong style="color:#f87171;">Box Zumbi</strong>: ocupa espaco, bloqueia receita e consome energia da equipe &mdash; sem retorno.</div>
+        <div style="margin-top:16px;padding:12px;background:rgba(220,38,38,0.25);border-radius:10px;font-size:13px;font-weight:700;color:#fca5a5;">Cada dia alem de 30 e receita que nao volta.</div>
+      </div>
+      <div class="regra-ouro">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.75;margin-bottom:14px;">Regra de Ouro &mdash; Conecta Storage 2026</div>
+        <div style="font-size:17px;font-weight:800;line-height:1.7;">"Agir ate 30 dias e <span style="color:#86efac;">recuperar</span>.<br>Agir entre 30 e 60 dias e <span style="color:#fbbf24;">tentar</span>.<br>Agir depois de 60 dias e <span style="color:#f87171;">perder</span>."</div>
+      </div>
+    </div>
+
     <div class="grid-2">
-      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Regua Inteligente com IA</h3><div style="position:relative;padding-left:24px;"><div style="position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--red));"></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--blue);">D+1 - WhatsApp automatico</div><div style="font-size:12px;color:var(--text2);">Lembrete amigavel com link de pagamento</div></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--sky);">D+3 - SMS + E-mail</div><div style="font-size:12px;color:var(--text2);">Segundo contato com destaque do valor</div></div><div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--amber);">D+7 - Ligacao humana</div><div style="font-size:12px;color:var(--text2);">Maior taxa de sucesso</div></div><div><div style="font-size:12px;font-weight:700;color:var(--red);">D+15 - Protocolo juridico</div><div style="font-size:12px;color:var(--text2);">Notificacao formal + aviso de destravamento</div></div></div></div>
-      <div class="card"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Boas Praticas</h3><div style="display:flex;flex-direction:column;gap:10px;"><div style="padding:10px;background:#f0fdf4;border-radius:8px;border-left:3px solid var(--green);font-size:13px;"><strong>Coletar TODOS os contatos</strong> - incluso redes sociais</div><div style="padding:10px;background:#eff6ff;border-radius:8px;border-left:3px solid var(--blue);font-size:13px;"><strong>PIX Automatico</strong> - debito recorrente reduz inadimplencia</div><div style="padding:10px;background:#fffbeb;border-radius:8px;border-left:3px solid var(--amber);font-size:13px;"><strong>Analise preditiva de risco</strong> - IA antes do primeiro atraso</div><div style="padding:10px;background:#fef2f2;border-radius:8px;border-left:3px solid var(--red);font-size:13px;"><strong>Negociacao antecipada</strong> - parcelamento antes do desaparecimento</div></div></div>
+      <div class="card">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Regua Inteligente com IA</h3>
+        <div style="position:relative;padding-left:24px;">
+          <div style="position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--red));"></div>
+          <div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--blue);">D+1 &mdash; WhatsApp automatico</div><div style="font-size:12px;color:var(--text2);">Lembrete amigavel com link de pagamento</div></div>
+          <div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--sky);">D+3 &mdash; SMS + E-mail</div><div style="font-size:12px;color:var(--text2);">Segundo contato com destaque do valor</div></div>
+          <div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--amber);">D+7 &mdash; Ligacao humana</div><div style="font-size:12px;color:var(--text2);">Atendente humano &mdash; maior taxa de sucesso</div></div>
+          <div style="margin-bottom:14px;"><div style="font-size:12px;font-weight:700;color:var(--red);">D+15 &mdash; Protocolo juridico</div><div style="font-size:12px;color:var(--text2);">Notificacao formal + aviso de destravamento</div></div>
+          <div><div style="font-size:12px;font-weight:700;color:#374151;">D+30 &mdash; Box Zumbi: escalar</div><div style="font-size:12px;color:var(--text2);">Gestao: acao extrajudicial imediata ou medidas cabiveis</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;">Boas Praticas</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="padding:10px;background:#f0fdf4;border-radius:8px;border-left:3px solid var(--green);font-size:13px;"><strong>Coletar TODOS os contatos</strong> &mdash; incluso redes sociais desde a proposta</div>
+          <div style="padding:10px;background:#eff6ff;border-radius:8px;border-left:3px solid var(--blue);font-size:13px;"><strong>PIX Automatico</strong> &mdash; debito recorrente reduz inadimplencia estruturalmente</div>
+          <div style="padding:10px;background:#fffbeb;border-radius:8px;border-left:3px solid var(--amber);font-size:13px;"><strong>Analise preditiva de risco</strong> &mdash; IA antes do primeiro atraso</div>
+          <div style="padding:10px;background:#fef2f2;border-radius:8px;border-left:3px solid var(--red);font-size:13px;"><strong>Negociacao antecipada</strong> &mdash; parcelamento antes do desaparecimento</div>
+          <div style="padding:10px;background:#faf5ff;border-radius:8px;border-left:3px solid var(--purple);font-size:13px;"><strong>Limite: 30 dias</strong> &mdash; alem disso e Box Zumbi = prejuizo garantido</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- TAKEAWAYS -->
 <section id="takeaways" class="bg-alt">
   <div class="container">
     <div class="section-tag">Conclusoes</div>
     <h2 class="section-title">Principais Takeaways do Conecta 2026</h2>
     <p class="section-sub">Os insights mais relevantes para quem opera, investe ou esta estudando o mercado de self storage no Brasil.</p>
     <div class="takeaway-grid">
-      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">01 - Mercado</div><div class="takeaway-text">O Brasil tem <strong>1/10 da densidade</strong> dos EUA. O desafio nao e usar, e <strong>saber o nome</strong>.</div></div>
-      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">02 - Valorizacao</div><div class="takeaway-text">Preco do m2 subiu <strong>+48%</strong> vs IPCA <strong>+36%</strong>. O setor e <strong>hedge contra inflacao</strong>.</div></div>
-      <div class="takeaway-card" style="border-color:var(--red);"><div class="takeaway-num" style="color:var(--red);">03 - Pagamentos</div><div class="takeaway-text">PIX chegou a <strong>38,54%</strong> dos pagamentos. PIX automatico = <strong>menos inadimplencia</strong>.</div></div>
-      <div class="takeaway-card" style="border-color:var(--amber);"><div class="takeaway-num" style="color:var(--amber);">04 - Seguros</div><div class="takeaway-text">Declarar valor <strong>dobra</strong> a adesao ao seguro. Sudeste lidera com 81,45% de contratos segurados.</div></div>
-      <div class="takeaway-card" style="border-color:var(--purple);"><div class="takeaway-num" style="color:var(--purple);">05 - Juridico</div><div class="takeaway-text">Revisao urgente: <strong>clausula de reequilibrio financeiro</strong> obrigatoria antes de 1/1/2027.</div></div>
-      <div class="takeaway-card" style="border-color:var(--sky);"><div class="takeaway-num" style="color:var(--sky);">06 - Dados</div><div class="takeaway-text">"A IA precisa de combustivel: <strong>dados</strong>." Coletar todos os contatos do cliente.</div></div>
-      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">07 - Ocupacao</div><div class="takeaway-text">Ocupacao subiu para <strong>74,71%</strong>. Meta: atingir os EUA (77%) com precificacao dinamica.</div></div>
-      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">08 - Investimento</div><div class="takeaway-text">Fluxo de caixa previsivel. <strong>60%+</strong> dos novos interessados ainda estao estudando o mercado.</div></div>
+      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">01 &mdash; Mercado</div><div class="takeaway-text">O Brasil tem <strong>1/10 da densidade</strong> dos EUA &mdash; mercado ainda muito pequeno. O desafio nao e usar, e <strong>saber o nome</strong>.</div></div>
+      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">02 &mdash; Valorizacao</div><div class="takeaway-text">Preco do m2 subiu <strong>+48%</strong> vs IPCA <strong>+36%</strong> (Jan/20&ndash;Abr/26). O setor e <strong>hedge contra inflacao</strong> &mdash; ganho real de valor.</div></div>
+      <div class="takeaway-card" style="border-color:var(--red);"><div class="takeaway-num" style="color:var(--red);">03 &mdash; Pagamentos</div><div class="takeaway-text">PIX chegou a <strong>38,54%</strong> dos pagamentos em 2026. Com PIX automatico, <strong>menos inadimplencia</strong>. O futuro e nao precisar cobrar.</div></div>
+      <div class="takeaway-card" style="border-color:var(--amber);"><div class="takeaway-num" style="color:var(--amber);">04 &mdash; Seguros</div><div class="takeaway-text">Declarar valor strong>dobra</strong> a adesao ao seguro (30&ndash;50% para 70&ndash;85%). Sudeste lidera com 81,45% de contratos segurados.</div></div>
+      <div class="takeaway-card" style="border-color:var(--purple);"><div class="takeaway-num" style="color:var(--purple);">05 &mdash; Juridico</div><div class="takeaway-text">Revisao urgente: <strong>clausula de reequilibrio financeiro</strong> obrigatoria antes de 1/1/2027 pela Reforma Tributaria.</div></div>
+      <div class="takeaway-card" style="border-color:var(--sky);"><div class="takeaway-num" style="color:var(--sky);">06 &mdash; Dados</div><div class="takeaway-text">"A IA precisa de combustivel: <strong>dados</strong>." Coletar todos os contatos do cliente &mdash; telefone, e-mail, WhatsApp, redes sociais.</div></div>
+      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">07 &mdash; Ocupacao</div><div class="takeaway-text">Ocupacao subiu para <strong>74,71%</strong>. Meta: atingir os EUA (77%) com precificacao dinamica e marketing de demanda latente.</div></div>
+      <div class="takeaway-card" style="border-color:var(--blue);"><div class="takeaway-num" style="color:var(--blue);">08 &mdash; Investimento</div><div class="takeaway-text">Fluxo de caixa previsivel, alta resiliencia a crises. <strong>60%+</strong> dos novos interessados ainda estao estudando o mercado &mdash; demanda futura garantida.</div></div>
+      <div class="takeaway-card" style="border-color:var(--green);"><div class="takeaway-num" style="color:var(--green);">09 &mdash; Tamanhos</div><div class="takeaway-text">Faixa ideal: <strong>3&ndash;9m&sup2;</strong>. Mix recomendado: 60&ndash;70% abaixo de 6m&sup2;. Em zonas urbanas densas, <strong>1&ndash;3m&sup2;</strong> tem o maior yield/m&sup2; incluindo endereco fiscal (R$297,61/m&sup2;).</div></div>
+      <div class="takeaway-card" style="border-color:var(--amber);"><div class="takeaway-num" style="color:var(--amber);">10 &mdash; Localizacao</div><div class="takeaway-text"><strong>"A influencia nao e um circulo &mdash; e uma elipse."</strong> Raio de 3&ndash;8 km. Tipos A ao D determinam o mix ideal. Coeficiente: 1,6x a 3,5x o aluguel residencial.</div></div>
+      <div class="takeaway-card" style="border-color:var(--red);"><div class="takeaway-num" style="color:var(--red);">11 &mdash; Inadimplencia</div><div class="takeaway-text"><strong>72,33%</strong> pagam em 7 dias. Agir ate 30 dias e recuperar &mdash; depois e <strong>Box Zumbi</strong> e gestao de prejuizo. Gap critico: operador age com 190 dias.</div></div>
+      <div class="takeaway-card" style="border-color:var(--purple);"><div class="takeaway-num" style="color:var(--purple);">12 &mdash; Marketing</div><div class="takeaway-text"><strong>89,7%</strong> chegam por mudanca, falta de espaco ou estoque. Decisao em ~7 dias, 2,63 visualizacoes. Promocao e capturar intencao &mdash; nao branding.</div></div>
     </div>
   </div>
 </section>
+
 <footer>
-  <strong>Conecta Storage 2026</strong> - Relatorio do Mercado<br>
-  <span style="font-size:12px;opacity:0.6;margin-top:8px;display:block;">Dados: Prisma Box (sistema de gestao) - ASBRASS - Grand View Research - Precedence Research - Cushman &amp; Wakefield<br>Congresso Conecta Storage 2026 - Sao Paulo, Brasil</span>
+  <strong>Conecta Storage 2026</strong> &mdash; Relatorio do Mercado<br>
+  <span style="font-size:12px;opacity:0.6;margin-top:8px;display:block;">
+    Dados: Prisma Box (sistema de gestao) &middot; ASBRASS &middot; Grand View Research &middot; Precedence Research &middot; Cushman &amp; Wakefield<br>
+    Elaborado com base nas apresentacoes do Congresso Conecta Storage 2026 &middot; Sao Paulo, Brasil
+  </span>
 </footer>
+
 <script>
 Chart.defaults.font.family="'Segoe UI',system-ui,sans-serif";
 Chart.defaults.color='#475569';
 const B='#1d4ed8',S='#0ea5e9',G='#059669',A='#d97706',R='#dc2626',P='#7c3aed',N='#0f2847';
+
 new Chart(document.getElementById('globalMarketChart'),{type:'bar',data:{labels:['2022','2023','2024','2025','2026 proj'],datasets:[{data:[54.6,58.3,62,64,67.8],backgroundColor:['#dbeafe','#dbeafe','#dbeafe','#dbeafe','#bfdbfe'],borderColor:[B,B,B,B,S],borderWidth:2,borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+v+'B'},min:50,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('usaOccupancyChart'),{type:'bar',data:{labels:['Oeste','Midwest','Nordeste','Sul','Media EUA'],datasets:[{data:[79.8,77.9,76.7,75,77],backgroundColor:[G,'#34d399','#6ee7b7','#a7f3d0',B],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},min:70,max:85,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('brasilBoxesChart'),{type:'bar',data:{labels:['2021','2022','2023','2024','2025'],datasets:[{data:[147.8,163,181,210,220.9],backgroundColor:[B,B,B,B,G],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'k'},min:130,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('brasilWorldChart'),{type:'line',data:{labels:['2024','2025','2026','2027','2028','2029','2030'],datasets:[{label:'Brasil (USD Bi)',data:[1.76,1.87,2.0,2.14,2.28,2.40,2.54],borderColor:B,backgroundColor:'rgba(29,78,216,0.1)',fill:true,tension:0.4,pointRadius:4,pointBackgroundColor:B}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+v+'B'},grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('prismaEvolutionChart'),{type:'line',data:{labels:['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],datasets:[{label:'Unidades',data:[45,72,105,148,165,198,235,270,304,314,322],borderColor:B,backgroundColor:'rgba(29,78,216,0.08)',fill:true,tension:0.4,yAxisID:'y'},{label:'Boxes (mil)',data:[8,13,19,27,35,44,54,63,71,76,80.4],borderColor:G,tension:0.4,yAxisID:'y2',borderDash:[5,3],pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{position:'left',grid:{color:'#f1f5f9'}},y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'k'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('regionDistChart'),{type:'doughnut',data:{labels:['Sudeste (189)','Sul (65)','Nordeste (42)','Centro-Oeste (18)','Norte (8)'],datasets:[{data:[189,65,42,18,8],backgroundColor:[B,S,G,A,P],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+
 new Chart(document.getElementById('perceptionChart'),{type:'doughnut',data:{labels:['Acha que precisa de mais','Aluga o tamanho certo','Aluga menor que precisa'],datasets:[{data:[45,35,20],backgroundColor:[R,G,A],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+
 new Chart(document.getElementById('occupancyChart'),{type:'bar',data:{labels:['Sudeste','Sul','C-Oeste','Nordeste','Norte','Brasil','EUA ref'],datasets:[{data:[77.8,76.2,72.1,69.4,63.2,74.71,77],backgroundColor:[G,G,A,A,R,B,'#94a3b8'],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},min:55,max:85,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('ticketChart'),{type:'bar',data:{labels:['Sudeste','Sul','C-Oeste','Nordeste','Norte','Media'],datasets:[{data:[534,482,456,421,388,491],backgroundColor:[B,S,G,A,P,N],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'R$'+v},min:300,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('compareChart'),{type:'bar',data:{labels:['Unidades Prisma','Boxes Prisma','ABL Total','Ticket Medio','Total Brasil'],datasets:[{label:'% vs 2025',data:[6,13,12,14,18],backgroundColor:['rgba(29,78,216,.8)','rgba(14,165,233,.8)','rgba(5,150,105,.8)','rgba(217,119,6,.8)','rgba(124,58,237,.8)'],borderRadius:10}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'+'+c.raw+'% vs 2025'}}},scales:{y:{ticks:{callback:v=>'+'+v+'%'},beginAtZero:true,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('paymentChart2026'),{type:'doughnut',data:{labels:['Boleto (50,26%)','PIX (38,54%)','Cartao (6,60%)','Outros (4,60%)'],datasets:[{data:[50.26,38.54,6.60,4.60],backgroundColor:[R,G,B,'#94a3b8'],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+
 new Chart(document.getElementById('paymentEvolutionChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2026'],datasets:[{label:'Boleto',data:[80,72,65,58,54,50.26],borderColor:R,tension:0.4,pointRadius:4,pointBackgroundColor:R},{label:'PIX',data:[0,8,16,26,33,38.54],borderColor:G,tension:0.4,pointRadius:4,pointBackgroundColor:G},{label:'Outros',data:[20,20,19,16,13,11.2],borderColor:'#94a3b8',tension:0.4,pointRadius:3,borderDash:[4,3]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{ticks:{callback:v=>v+'%'},min:0,max:90,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
-new Chart(document.getElementById('priceVsInflationChart'),{type:'line',data:{labels:['Jan/20','Jul/20','Jan/21','Jul/21','Jan/22','Jul/22','Jan/23','Jul/23','Jan/24','Jul/24','Jan/25','Jul/25','Abr/26'],datasets:[{label:'Preco do m2 (indice)',data:[70,71,75,80,84,88,93,97,100,102,103,104,104],borderColor:B,fill:false,tension:0.4,pointRadius:3,pointBackgroundColor:B},{label:'IPCA Acumulado (indice)',data:[65,66,67,70,73,76,78,80,82,83,84,85,86],borderColor:R,fill:false,tension:0.4,borderDash:[6,3],pointRadius:3,pointBackgroundColor:R}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{min:60,max:115,ticks:{callback:v=>'idx '+v},grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('priceVsInflationChart'),{type:'line',data:{labels:['Jan/20','Jul/20','Jan/21','Jul/21','Jan/22','Jul/22','Jan/23','Jul/23','Jan/24','Jul/24','Jan/25','Jul/25','Abr/26'],datasets:[{label:'Preco do m2 (indice)',data:[70,71,75,80,84,88,93,97,100,102,103,104,104],borderColor:B,backgroundColor:'rgba(29,78,216,0.08)',fill:false,tension:0.4,pointRadius:3,pointBackgroundColor:B},{label:'IPCA Acumulado (indice)',data:[65,66,67,70,73,76,78,80,82,83,84,85,86],borderColor:R,backgroundColor:'rgba(220,38,38,0.05)',fill:false,tension:0.4,borderDash:[6,3],pointRadius:3,pointBackgroundColor:R}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{min:60,max:115,ticks:{callback:v=>'idx '+v},grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('adherenceChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2025'],datasets:[{label:'Com valor declarado',data:[73,75,77,79,84,86],borderColor:G,backgroundColor:'rgba(5,150,105,0.08)',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:G},{label:'Sem valor declarado',data:[40,33,34,40,47,50],borderColor:R,backgroundColor:'rgba(220,38,38,0.08)',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:R}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{ticks:{callback:v=>v+'%'},min:20,max:95,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('seguroEvolChart'),{type:'line',data:{labels:['2020','2021','2022','2023','2024','2025'],datasets:[{label:'% contratos com seguro',data:[61.68,59.80,61.68,64.80,74.45,77.56],borderColor:G,tension:0.4,pointRadius:4,pointBackgroundColor:G,yAxisID:'y'},{label:'Premio medio/m2 (R$)',data:[6.10,8.93,6.10,6.40,6.49,6.97],borderColor:A,tension:0.4,pointRadius:4,pointBackgroundColor:A,borderDash:[5,3],yAxisID:'y2'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{position:'left',ticks:{callback:v=>v+'%'},min:55,max:85,grid:{color:'#f1f5f9'}},y2:{position:'right',ticks:{callback:v=>'R$'+v},min:5,max:10,grid:{display:false}},x:{grid:{display:false}}}}});
+
 new Chart(document.getElementById('seguroChart'),{type:'bar',data:{labels:['Ate 3m2','3-10m2','10-15m2','Acima 15m2'],datasets:[{data:[2000,8000,20000,40000],backgroundColor:[S,B,N,'#0f172a'],borderRadius:8}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'R$'+(v/1000)+'k'},beginAtZero:true,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('sizeOccupancyChart'),{type:'bar',data:{labels:['1-3mÂ²','3-6mÂ²','6-9mÂ²','9-15mÂ²','15-25mÂ²','>25mÂ²'],datasets:[{label:'Padrao (â¥1,80m)',data:[61.7,48.4,47.6,61.0,50.2,21.8],backgroundColor:B,borderRadius:4},{label:'Baixo (<1,80m)',data:[37.4,46.2,30.4,40.9,84.0,89.0],backgroundColor:A,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},scales:{y:{ticks:{callback:v=>v+'%'},min:0,max:100,grid:{color:'#f1f5f9'}},x:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('clientNeedsChart'),{type:'doughnut',data:{labels:['Mudanca (39,7%)','Falta espaco (36%)','Estoque/Negocio (14%)','Outros (10,3%)'],datasets:[{data:[39.7,36.0,14.0,10.3],backgroundColor:[B,G,A,'#94a3b8'],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}}}});
+
+new Chart(document.getElementById('permanenceChart'),{type:'bar',data:{labels:['Anual','Semestral','Mensal','Quadrimestral','Trimestral','Bimestral'],datasets:[{data:[15,15,15,13,11,10],backgroundColor:[B,B,B,S,G,A],borderRadius:6}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+' meses'}}},scales:{x:{ticks:{callback:v=>v+'m'},max:18,beginAtZero:true,grid:{color:'#f1f5f9'}},y:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('recoveryChart'),{type:'bar',data:{labels:['01-07 dias (72,33%)','08-15 dias (9,91%)','16-30 dias (7,94%)','31-60 dias (5,42%)','61-90 dias (2,00%)','+90 dias (2,40%)'],datasets:[{data:[72.33,9.91,7.94,5.42,2.00,2.40],backgroundColor:[G,'#34d399','#86efac',A,R,'#4b5563'],borderRadius:6}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'%'}}},scales:{x:{ticks:{callback:v=>v+'%'},max:80,beginAtZero:true,grid:{color:'#f1f5f9'}},y:{grid:{display:false}}}}});
 </script>
 </body>
 </html>
